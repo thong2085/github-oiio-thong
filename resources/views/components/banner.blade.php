@@ -1,11 +1,11 @@
 <x-card>
     <div class="slide-image">
-        <img class="rounded-top" src="{{ asset($settings['site_banner']) }}" width="100%" />
+        <img class="rounded-top" src="{{ asset('assets/images/default/banner.jpeg') }}" width="100%" />
     </div>
 
     <div class="card-body bg-yellow-light" id="test" style="border-bottom: 1px solid #fff;">
         <h3 class="d-flex align-items-center fw-bold">
-            <img src="{{ asset($settings['site_logo']) }}" class="border-logo" width="100" />
+            <img src="{{ asset('assets/image/logo.png') }}" class="border-logo" width="100" />
             <span class="fs-sm-15">Đặt Đơn Shopee - TikTok Shop</span>
         </h3>
         <p class="mb-0 text-center text-md-start">Cộng đồng facebook: 

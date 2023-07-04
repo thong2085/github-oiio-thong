@@ -1,7 +1,7 @@
 <div class="container pt-5 pb-5">
     <div class="row">
         <div class="col-12 col-md-4">
-            <img class="mb-3" src="{{ asset($settings['site_logo']) }}" width="100"/>
+            <img class="mb-3" src="{{ asset('assets/images/logo.png') }}" width="100"/>
             <div class="navbar-nav">
                 <li class="nav-item">
                     <x-link class="header-icon nav-link text-orange" :href="'mailto:'.$settings['email']">

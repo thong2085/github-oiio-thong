@@ -2,7 +2,7 @@
     <div class="container">
         <div class="">
             <a class="navbar-brand me-2" href="{{ route('homepage') }}">
-                <img src="{{ asset($settings['site_logo']) }}" width="100" /> 
+                <img src="{{ asset('assets/image/logo.png') }}" width="100" /> 
             </a>
         </div>
         <div class="d-flex align-items-center gap-2">

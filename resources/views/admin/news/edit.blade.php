@@ -32,5 +32,5 @@
 @push('custom-js')
 <!-- ckfinder js -->
 @include('ckfinder::setup')   
-<script src="{{ asset('public/libs/ckeditor/ckeditor.js') }}"></script>
+<script src="{{ asset('libs/ckeditor/ckeditor.js') }}"></script>
 @endpush
