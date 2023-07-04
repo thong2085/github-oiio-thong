@@ -53,6 +53,10 @@ class UserController extends Controller
         return redirect()->route('user.index')->with('error', __('Bạn đã sỡ hữu cửa hàng rồi'));
     }
 
+    public function addShop() {
+        return view('user.info.test');
+    }
+
     public function postStore(Request $request)
     {
         $this->service->shop($request);
