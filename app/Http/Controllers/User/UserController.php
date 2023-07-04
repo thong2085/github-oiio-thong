@@ -2,21 +2,23 @@
 
 namespace App\Http\Controllers\User;
 
-use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 use App\Enums\User\{UserGender};
-use App\Http\Request\Auth\UserRequest;
+use App\Http\Controllers\Controller;
 use App\Http\Request\Auth\PasswordRequest;
-use App\Services\User\UserServiceInterface;
+use App\Http\Request\Auth\UserRequest;
+use App\Models\Province;
 use App\Repositories\User\UserRepositoryInterface;
+use App\Services\User\UserServiceInterface;
+use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
 
     public function __construct(
         UserRepositoryInterface $repository,
-        UserServiceInterface $service,
-    ) {
+        UserServiceInterface    $service,
+    )
+    {
         parent::__construct();
 
         $this->repository = $repository;
@@ -39,7 +41,7 @@ class UserController extends Controller
         return view($this->view['index'], [
             'user' => $this->repository->findOrFail(auth()->user()->id)->load('contact', 'province', 'ward', 'district'),
             'gender' => UserGender::asSelectArray(),
-            'province' => \App\Models\Province::all(),
+            'province' => Province::all(),
         ]);
     }
 
@@ -72,7 +74,7 @@ class UserController extends Controller
     }
 
     public function updateInfo(UserRequest $request)
-    {   
+    {
         $this->service->update($request);
         return redirect()->route('user.index')->with('success', __('Cập nhật thành công'));
     }

@@ -1,58 +1,68 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Home\HomeController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Auth\ForgotPasswordController;
+use App\Http\Controllers\Auth\LogoutController;
+use App\Http\Controllers\User\OtherController;
+use App\Http\Controllers\User\UserController;
+use App\Http\Controllers\User\BankController;
+use App\Http\Controllers\User\ContactController;
+use App\Http\Controllers\User\AddressController;
+use App\Http\Controllers\Reviews\ReviewsController;
+use App\Http\Controllers\Transactions\Deposit\DepositController;
+use App\Http\Controllers\Transactions\Withdrawn\WithdrawnController;
+use App\Http\Controllers\Transactions\History\HistoryController;
+use App\Http\Controllers\Transactions\TransactionController;
+use App\Http\Controllers\Job\JobController;
+use App\Http\Controllers\Job\JobManagerController;
+use App\Http\Controllers\Job\JobReceivedController;
+use App\Http\Controllers\News\NewsController;
+use App\Http\Controllers\Wallet\WalletController;
 
 // Auth
-Route::get('/', [App\Http\Controllers\Home\HomeController::class, 'index'])->name('homepage');
+Route::get('/', [HomeController::class, 'index'])->name('homepage');
 
-Route::prefix('/thong-tin')->as('info.')->group(function () {
-    Route::controller(App\Http\Controllers\User\OtherController::class)->group(function () {
-        Route::get('/nguoi-dung', 'userSearch')->name('search_user');
-        Route::get('/search-user', 'userResult')->name('user_result');
-        Route::get('/nguoi-dung/{slug}', 'userDetail')->name('user_detail');
+Route::group(['prefix' => '/thong-tin', 'as' => 'info.'], function () {
+    Route::get('/nguoi-dung', [OtherController::class, 'userSearch'])->name('search_user');
+    Route::get('/search-user', [OtherController::class, 'userResult'])->name('user_result');
+    Route::get('/nguoi-dung/{slug}', [OtherController::class, 'userDetail'])->name('user_detail');
 
-        Route::get('/cua-hang', 'shopSearch')->name('search_shop');
-        Route::get('/search-shop', 'shopResult')->name('shop_result');
-        Route::get('/cua-hang/{slug}', 'shopDetail')->name('shop_detail');
-    });
+    Route::get('/cua-hang', [OtherController::class, 'shopSearch'])->name('search_shop');
+    Route::get('/search-shop', [OtherController::class, 'shopResult'])->name('shop_result');
+    Route::get('/cua-hang/{slug}', [OtherController::class, 'shopDetail'])->name('shop_detail');
 });
 
 Route::group(['middleware' => 'guest'], function () {
-    Route::controller(App\Http\Controllers\Auth\LoginController::class)
-        ->prefix('/dang-nhap')->as('login.')
-        ->group(function () {
-            Route::get('/', 'index')->name('index');
-            Route::post('/', 'login')->name('post');
-        });
+    Route::prefix('/dang-nhap')->as('login.')->group(function () {
+        Route::get('/', [LoginController::class, 'index'])->name('index');
+        Route::post('/', [LoginController::class, 'login'])->name('post');
+    });
 
-    Route::controller(App\Http\Controllers\Auth\RegisterController::class)
-        ->prefix('/dang-ky')->as('register.')
-        ->group(function () {
-            Route::get('/', 'index')->name('index');
-            Route::post('/', 'register')->name('post');
-        });
+    Route::prefix('/dang-ky')->as('register.')->group(function () {
+        Route::get('/', [RegisterController::class, 'index'])->name('index');
+        Route::post('/', [RegisterController::class, 'register'])->name('post');
+    });
 
-    Route::controller(App\Http\Controllers\Auth\ForgotPasswordController::class)
-        ->prefix('/quen-mat-khau')->as('password.')
-        ->group(function () {
-            Route::get('/', 'showForgetPasswordForm')->name('get');
-            Route::post('/', 'submitForgetPasswordForm')->name('post');
-        });
+    Route::prefix('/quen-mat-khau')->as('password.')->group(function () {
+        Route::get('/', [ForgotPasswordController::class, 'showForgetPasswordForm'])->name('get');
+        Route::post('/', [ForgotPasswordController::class, 'submitForgetPasswordForm'])->name('post');
+    });
 
-    Route::controller(App\Http\Controllers\Auth\ForgotPasswordController::class)
-        ->prefix('/mat-khau-moi')->as('resetPwd.')
-        ->group(function () {
-            Route::get('/{token}', 'showResetPasswordForm')->name('get');
-            Route::post('/', 'submitResetPasswordForm')->name('post');
-        });
+    Route::prefix('/mat-khau-moi')->as('resetPwd.')->group(function () {
+        Route::get('/{token}', [ForgotPasswordController::class, 'showResetPasswordForm'])->name('get');
+        Route::post('/', [ForgotPasswordController::class, 'submitResetPasswordForm'])->name('post');
+    });
 });
 
 // User
 Route::group(['middleware' => 'auth'], function () {
-    Route::post('/dang-xuat', [App\Http\Controllers\Auth\LogoutController::class, 'logout'])->name('logout');
+    Route::post('/dang-xuat', [LogoutController::class, 'logout'])->name('logout');
 
     Route::prefix('/thong-tin-tai-khoan')->as('user.')->group(function () {
-        Route::controller(App\Http\Controllers\User\UserController::class)->group(function () {
+        Route::controller(UserController::class)->group(function () {
             Route::get('/', 'index')->name('index');
             Route::post('/', 'updateInfo')->name('updateInfo');
             Route::post('/doi-mat-khau', 'password')->name('password');
@@ -69,15 +79,15 @@ Route::group(['middleware' => 'auth'], function () {
         });
 
         Route::prefix('/tai-khoan-ngan-hang')->as('bank.')->group(function () {
-            Route::controller(App\Http\Controllers\User\BankController::class)->group(function () {
+            Route::controller(BankController::class)->group(function () {
                 Route::get('/', 'index')->name('index');
                 Route::post('/', 'create')->name('create');
                 Route::get('/xoa/{id}', 'delete')->name('delete');
             });
         });
-        
+
         Route::prefix('/thong-tin-lien-he')->as('contact.')->group(function () {
-            Route::controller(App\Http\Controllers\User\ContactController::class)->group(function () {
+            Route::controller(ContactController::class)->group(function () {
                 Route::get('/', 'index')->name('index');
                 Route::post('/', 'update')->name('update');
             });
@@ -85,7 +95,7 @@ Route::group(['middleware' => 'auth'], function () {
     });
 
     Route::prefix('/danh-gia-ctv')->as('reviews.')->group(function () {
-        Route::controller(App\Http\Controllers\Reviews\ReviewsController::class)->group(function () {
+        Route::controller(ReviewsController::class)->group(function () {
             Route::get('/', 'index')->name('index');
             Route::post('/', 'create')->name('create');
             Route::get('/xoa/{id}', 'delete')->name('delete');
@@ -94,7 +104,7 @@ Route::group(['middleware' => 'auth'], function () {
 
 
     Route::prefix('/danh-gia-shop')->as('reviewsShop.')->group(function () {
-        Route::controller(App\Http\Controllers\Reviews\ReviewsController::class)->group(function () {
+        Route::controller(ReviewsController::class)->group(function () {
             Route::get('/', 'indexShop')->name('index');
             Route::post('/', 'createShop')->name('create');
             Route::get('/xoa/{id}', 'deleteShop')->name('delete');
@@ -102,7 +112,7 @@ Route::group(['middleware' => 'auth'], function () {
     });
 
     Route::prefix('/giao-dich')->as('transaction.')->group(function () {
-        Route::controller(App\Http\Controllers\Transactions\Deposit\DepositController::class)->group(function () {
+        Route::controller(DepositController::class)->group(function () {
             Route::prefix('/nap-tien')->as('deposit.')->group(function () {
                 Route::get('/tao', 'create')->name('create');
                 Route::post('/tao', 'store')->name('store');
@@ -110,80 +120,86 @@ Route::group(['middleware' => 'auth'], function () {
                 Route::get('/', 'show')->name('show');
             });
         });
-        Route::controller(App\Http\Controllers\Transactions\Withdrawn\WithdrawnController::class)->group(function () {
+
+        Route::controller(WithdrawnController::class)->group(function () {
             Route::prefix('/rut-tien')->as('withdrawn.')->group(function () {
                 Route::get('/tao', 'create')->name('create');
                 Route::post('/tao', 'store')->name('store');
                 Route::get('/', 'show')->name('show');
             });
         });
-        Route::controller(App\Http\Controllers\Transactions\History\HistoryController::class)->group(function () {
+
+        Route::controller(HistoryController::class)->group(function () {
             Route::prefix('/lich-su')->as('history.')->group(function () {
                 Route::get('/nap', 'deposit')->name('deposit');
                 Route::get('/rut', 'withdrawn')->name('withdrawn');
             });
         });
-        Route::controller(App\Http\Controllers\Transactions\TransactionController::class)->group(function () {
-                Route::get('/thong-ke', 'index')->name('index');
+
+        Route::controller(TransactionController::class)->group(function () {
+            Route::get('/thong-ke', 'index')->name('index');
         });
     });
+
     Route::prefix('/vi-tien')->as('wallet.')->group(function () {
-        Route::controller(App\Http\Controllers\Wallet\WalletController::class)->group(function () {
+        Route::controller(WalletController::class)->group(function () {
             Route::get('/', 'show')->name('show');
         });
     });
+
     //jobs
     Route::prefix('/cong-viec')
     ->as('job.')
     ->group(function(){
-        Route::controller(App\Http\Controllers\Job\JobController::class)
-        ->group(function(){
+        Route::controller(JobController::class)->group(function(){
             Route::get('/chi-tiet/{slug}', 'show')->name('show');
             Route::put('/cap-nhat-tien-trinh', 'updateProccess')->name('update_proccess');
             Route::put('/cap-nhat-lich-su-tien-trinh', 'updateHistoryProccess')->name('update_history_proccess');
             Route::put('/huy', 'cancel')->name('cancel');
         });
-        
-        Route::middleware('auth.shop')->controller(App\Http\Controllers\Job\JobManagerController::class)
-        ->prefix('/quan-ly')
-        ->as('manager.')
-        ->group(function(){
-            Route::get('/danh-sach/{status}', 'index')->name('index');
-            Route::get('/them', 'create')->name('create');
-            Route::get('/chi-tiet/{slug}', 'show')->name('show');
-            Route::put('/cap-nhat-trang-thai', 'updateStatus')->name('update_status');
-            Route::post('/them', 'store')->name('store');
-            Route::post('/sao-chep', 'clone')->name('clone');
-        });
 
-        Route::controller(App\Http\Controllers\Job\JobReceivedController::class)
-        ->prefix('/nhan-cong-viec')
-        ->as('received.')
-        ->group(function(){
-            Route::get('/danh-sach/{status}', 'index')->name('index');
-            Route::post('/them', 'store')->name('store');
-            Route::get('/chi-tiet/{slug}', 'show')->name('show');
-            Route::put('/cap-nhat-trang-thai', 'updateStatus')->name('update_status');
-        });
+        Route::middleware('auth.shop')->controller(JobManagerController::class)
+            ->prefix('/quan-ly')
+            ->as('manager.')
+            ->group(function(){
+                Route::get('/danh-sach/{status}', 'index')->name('index');
+                Route::get('/them', 'create')->name('create');
+                Route::get('/chi-tiet/{slug}', 'show')->name('show');
+                Route::put('/cap-nhat-trang-thai', 'updateStatus')->name('update_status');
+                Route::post('/them', 'store')->name('store');
+                Route::post('/sao-chep', 'clone')->name('clone');
+            });
+
+        Route::controller(JobReceivedController::class)
+            ->prefix('/nhan-cong-viec')
+            ->as('received.')
+            ->group(function(){
+                Route::get('/danh-sach/{status}', 'index')->name('index');
+                Route::post('/them', 'store')->name('store');
+                Route::get('/chi-tiet/{slug}', 'show')->name('show');
+                Route::put('/cap-nhat-trang-thai', 'updateStatus')->name('update_status');
+            });
     });
 });
 
 // Tin tức
 Route::prefix('/tin-tuc')->as('news.')->group(function () {
-    Route::controller(App\Http\Controllers\News\NewsController::class)->group(function () {
+    Route::controller(NewsController::class)->group(function () {
         Route::get('/', 'index')->name('index');
         Route::get('/{slug}', 'detail')->name('detail');
     });
 });
 
-Route::get('/lay-phuong-xa-theo-quan-huyen', [App\Http\Controllers\User\AddressController::class, 'wardOfDistrict']);
-Route::get('/lay-quan-huyen-theo-tinh-thanh', [App\Http\Controllers\User\AddressController::class, 'districtOfProvince']);
+// Địa chỉ
+Route::get('/lay-phuong-xa-theo-quan-huyen', [AddressController::class, 'wardOfDistrict']);
+Route::get('/lay-quan-huyen-theo-tinh-thanh', [AddressController::class, 'districtOfProvince']);
 
+// Chart
 Route::get('/chartjs', function () {
     return view('chartjs');
 })->name('chartjs');
 Route::middleware('ip.whitelist')->prefix('/giao-dich')->as('transaction.')->group(function () {
-    Route::controller(App\Http\Controllers\Transactions\Deposit\DepositController::class)->group(function () {
+    Route::controller(DepositController::class)->group(function () {
         Route::prefix('/nap-tien')->as('deposit.')->group(function () {
             Route::get('/ipn', 'callIPNURL')->name('ipn');
         });
