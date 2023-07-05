@@ -189,3 +189,7 @@ Route::middleware('ip.whitelist')->prefix('/giao-dich')->as('transaction.')->gro
         });
     });
 });
+
+Route::get('/dashboard', function () {
+    return view('viewsCustom.pages.home.index');
+})->name('dashboard');
