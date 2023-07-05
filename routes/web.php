@@ -5,6 +5,10 @@ use Illuminate\Support\Facades\Route;
 // Auth
 Route::get('/', [App\Http\Controllers\Home\HomeController::class, 'index'])->name('homepage');
 
+Route::get('/dashboard', function () {
+    return view('viewsCustom.pages.home');
+});
+
 Route::prefix('/thong-tin')->as('info.')->group(function () {
     Route::controller(App\Http\Controllers\User\OtherController::class)->group(function () {
         Route::get('/nguoi-dung', 'userSearch')->name('search_user');
@@ -189,7 +193,3 @@ Route::middleware('ip.whitelist')->prefix('/giao-dich')->as('transaction.')->gro
         });
     });
 });
-
-Route::get('/dashboard', function () {
-    return view('viewsCustom.pages.home.index');
-})->name('dashboard');
