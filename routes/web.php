@@ -58,7 +58,8 @@ Route::group(['middleware' => 'auth'], function () {
             Route::post('/doi-mat-khau', 'password')->name('password');
 
             Route::middleware('auth.member')->group(function(){
-                Route::get('/tao-cua-hang', 'createShop')->name('create_shop');
+                Route::get('/tao-cua-hang', [App\Http\Controllers\User\UserController::class,'createShop'])->name('create_shop');
+//                Route::get('/tao-cua-hang', 'createShop')->name('create_shop');
                 Route::post('/tao-cua-hang', 'postStore')->name('post_shop');
             });
 
@@ -91,7 +92,6 @@ Route::group(['middleware' => 'auth'], function () {
             Route::get('/xoa/{id}', 'delete')->name('delete');
         });
     });
-
 
     Route::prefix('/danh-gia-shop')->as('reviewsShop.')->group(function () {
         Route::controller(App\Http\Controllers\Reviews\ReviewsController::class)->group(function () {
