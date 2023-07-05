@@ -18,11 +18,16 @@
     <link rel="stylesheet" href="{{ asset('viewsCustom/assets/css/style.css') }}">
     <!-- End layout styles -->
     <link rel="shortcut icon" href="{{ asset('viewsCustom/assets/images/favicon.ico') }}" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap">
 </head>
 
 <body>
 <!-- Start Header -->
-<nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+<nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row"
+     style="background: linear-gradient(141deg, rgba(255, 255, 240, 0.04) 0%, rgba(255, 255, 240, 0.02) 100%) !important;
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.30);
+            box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15);">
     @include('viewsCustom.layout.include.header')
 </nav>
 <!-- End Header -->

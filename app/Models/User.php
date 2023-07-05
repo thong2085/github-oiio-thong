@@ -95,7 +95,7 @@ class User extends Authenticatable
     public function blacklistJobs(){
         return $this->hasMany(UserBlacklistJob::class, 'worker_id');
     }
-    
+
     public function jobStatusNew(){
         return $this->hasMany(JobStatusNew::class, 'user_id', 'id');
     }
@@ -130,7 +130,7 @@ class User extends Authenticatable
     }
     public function getAvatar()
     {
-        $img = is_null($this->avatar) ? asset('assets/image/avatar.png') : $this->avatar;
+        $img = is_null($this->avatar) ? asset('icon/profile.svg') : $this->avatar;
         return $img;
     }
     public function getNameShop(){

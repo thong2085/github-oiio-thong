@@ -1,13 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Custom\CustomController;
 // Auth
 Route::get('/', [App\Http\Controllers\Home\HomeController::class, 'index'])->name('homepage');
 
-Route::get('/dashboard', function () {
-    return view('viewsCustom.pages.home');
-});
+Route::get('/custom', [CustomController::class, 'index'])->name('custom');
 
 Route::prefix('/thong-tin')->as('info.')->group(function () {
     Route::controller(App\Http\Controllers\User\OtherController::class)->group(function () {

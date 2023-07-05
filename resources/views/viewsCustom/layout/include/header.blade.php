@@ -1,5 +1,13 @@
 <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-    <a class="navbar-brand brand-logo" href="index.html"><img src="{{ asset('viewsCustom/assets/images/logo.svg') }}" alt="logo" /></a>
+    <a class="navbar-brand brand-logo" href="{{ route('homepage') }}">
+        <img src="{{ asset('icon/logoHeader.png') }}" alt="logo"
+             style="display: flex;
+                    width: 140px;
+                    height: 60px;
+                    justify-content: center;
+                    align-items: center;
+                    flex-shrink: 0;"/>
+    </a>
     <a class="navbar-brand brand-logo-mini" href="index.html"><img src="{{ asset('viewsCustom/assets/images/logo-mini.svg') }}" alt="logo" /></a>
 </div>
 <div class="navbar-menu-wrapper d-flex align-items-stretch">
@@ -12,38 +20,22 @@
                 <div class="input-group-prepend bg-transparent">
                     <i class="input-group-text border-0 mdi mdi-magnify"></i>
                 </div>
-                <input type="text" class="form-control bg-transparent border-0" placeholder="Search projects">
+                <input type="text" class="form-control bg-transparent border-2" placeholder="Tìm kiếm của hàng, CTV..."
+                        style="width: 500px;">
             </div>
         </form>
     </div>
     <ul class="navbar-nav navbar-nav-right">
-        <li class="nav-item nav-profile dropdown">
-            <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                <div class="nav-profile-img">
-                    <img src="{{ asset('viewsCustom/assets/images/faces/face1.jpg') }}" alt="image">
-                    <span class="availability-status online"></span>
-                </div>
-                <div class="nav-profile-text">
-                    <p class="mb-1 text-black">David Greymaax</p>
-                </div>
-            </a>
-            <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
-                <a class="dropdown-item" href="#">
-                    <i class="mdi mdi-cached me-2 text-success"></i> Activity Log </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">
-                    <i class="mdi mdi-logout me-2 text-primary"></i> Signout </a>
-            </div>
-        </li>
-        <li class="nav-item d-none d-lg-block full-screen-link">
-            <a class="nav-link">
-                <i class="mdi mdi-fullscreen" id="fullscreen-button"></i>
-            </a>
-        </li>
         <li class="nav-item dropdown">
             <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="mdi mdi-email-outline"></i>
-                <span class="count-symbol bg-warning"></span>
+                <img src="{{ asset('icon/settings.svg') }}"
+                     style="display: flex;
+                                        width: 24px;
+                                        height: 24px;
+                                        padding: 1px;
+                                        justify-content: center;
+                                        align-items: center;
+                                        flex-shrink: 0;">
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="messageDropdown">
                 <h6 class="p-3 mb-0">Messages</h6>
@@ -83,7 +75,14 @@
         </li>
         <li class="nav-item dropdown">
             <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-bs-toggle="dropdown">
-                <i class="mdi mdi-bell-outline"></i>
+                <img src="{{ asset('icon/bell.svg') }}"
+                     style="display: flex;
+                                        width: 24px;
+                                        height: 24px;
+                                        padding: 1px;
+                                        justify-content: center;
+                                        align-items: center;
+                                        flex-shrink: 0;">
                 <span class="count-symbol bg-danger"></span>
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
@@ -128,15 +127,32 @@
                 <h6 class="p-3 mb-0 text-center">See all notifications</h6>
             </div>
         </li>
-        <li class="nav-item nav-logout d-none d-lg-block">
-            <a class="nav-link" href="#">
-                <i class="mdi mdi-power"></i>
+        <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                @if (auth()->check())
+                    <div class="nav-profile-img">
+                        <img src="{{asset(auth()->user()->getAvatar())}}" width="35px" height="35px"
+                             style="display: flex;
+                                    align-items: flex-end;
+                                    gap: 10px;"
+                             alt="image">
+                        <span class="availability-status online"></span>
+                    </div>
+                    <div class="nav-profile-text">
+                        <p class="mb-1 text-black">{{ auth()->user()->username }}</p>
+                    </div>
+                @endif
             </a>
-        </li>
-        <li class="nav-item nav-settings d-none d-lg-block">
-            <a class="nav-link" href="#">
-                <i class="mdi mdi-format-line-spacing"></i>
-            </a>
+            <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
+                <a class="dropdown-item" href="{{ route('user.index') }}">
+                    <i class="mdi mdi-cached me-2 text-success"></i> Thông tin tài khoản </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">
+                    <i class="mdi mdi-cached me-2 text-success"></i> Tài khoản ngân hàng </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{{ route('logout') }}">
+                    <i class="mdi mdi-logout me-2 text-primary"></i> Đăng xuất </a>
+            </div>
         </li>
     </ul>
     <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
