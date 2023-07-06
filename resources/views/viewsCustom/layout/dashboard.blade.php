@@ -50,7 +50,7 @@
         <!-- End Content -->
 
         <!-- Start Footer -->
-        <footer class="footer" style="color: #A6A4A4; border-top: none;">
+        <footer class="footer" style="border-top: none; width: 100%; background: #F3F3ED">
             @include('viewsCustom.layout.include.footer')
         </footer>
         <!-- End Footer -->
