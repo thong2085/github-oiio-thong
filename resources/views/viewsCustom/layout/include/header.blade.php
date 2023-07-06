@@ -1,5 +1,6 @@
-<div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-    <a class="navbar-brand brand-logo" href="{{ route('homepage') }}">
+<div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center" style="background: #FFFFF0">
+    {{-- Logo --}}
+    <a class="navbar-brand brand-logo" href="{{ route('homepage') }}" style="background: #FFFDF6">
         <img src="{{ asset('icon/logoHeader.png') }}" alt="logo"
              style="display: flex;
                     width: 140px;
@@ -8,12 +9,13 @@
                     align-items: center;
                     flex-shrink: 0;"/>
     </a>
-    <a class="navbar-brand brand-logo-mini" href="index.html"><img src="{{ asset('viewsCustom/assets/images/logo-mini.svg') }}" alt="logo" /></a>
+    {{-- Logo Mobile --}}
+    <a class="navbar-brand brand-logo-mini" href="{{ route('homepage') }}">
+        <img src="{{ asset('viewsCustom/assets/images/logo-mini.svg') }}" alt="logo" />
+    </a>
 </div>
-<div class="navbar-menu-wrapper d-flex align-items-stretch">
-    <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
-        <span class="mdi mdi-menu"></span>
-    </button>
+<div class="navbar-menu-wrapper d-flex align-items-center justify-content-center">
+    {{-- Tìm kiếm --}}
     <div class="search-field d-none d-md-block">
         <form class="d-flex align-items-center h-100" action="#">
             <div class="input-group">
@@ -25,54 +27,9 @@
             </div>
         </form>
     </div>
+
     <ul class="navbar-nav navbar-nav-right">
-        <li class="nav-item dropdown">
-            <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                <img src="{{ asset('icon/settings.svg') }}"
-                     style="display: flex;
-                                        width: 24px;
-                                        height: 24px;
-                                        padding: 1px;
-                                        justify-content: center;
-                                        align-items: center;
-                                        flex-shrink: 0;">
-            </a>
-            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="messageDropdown">
-                <h6 class="p-3 mb-0">Messages</h6>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item preview-item">
-                    <div class="preview-thumbnail">
-                        <img src="{{ asset('viewsCustom/assets/images/faces/face4.jpg') }}" alt="image" class="profile-pic">
-                    </div>
-                    <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
-                        <h6 class="preview-subject ellipsis mb-1 font-weight-normal">Mark send you a message</h6>
-                        <p class="text-gray mb-0"> 1 Minutes ago </p>
-                    </div>
-                </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item preview-item">
-                    <div class="preview-thumbnail">
-                        <img src="{{ asset('viewsCustom/assets/images/faces/face2.jpg') }}" alt="image" class="profile-pic">
-                    </div>
-                    <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
-                        <h6 class="preview-subject ellipsis mb-1 font-weight-normal">Cregh send you a message</h6>
-                        <p class="text-gray mb-0"> 15 Minutes ago </p>
-                    </div>
-                </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item preview-item">
-                    <div class="preview-thumbnail">
-                        <img src="{{ asset('viewsCustom/assets/images/faces/face3.jpg') }}" alt="image" class="profile-pic">
-                    </div>
-                    <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
-                        <h6 class="preview-subject ellipsis mb-1 font-weight-normal">Profile picture updated</h6>
-                        <p class="text-gray mb-0"> 18 Minutes ago </p>
-                    </div>
-                </a>
-                <div class="dropdown-divider"></div>
-                <h6 class="p-3 mb-0 text-center">4 new messages</h6>
-            </div>
-        </li>
+        {{-- Thông báo --}}
         <li class="nav-item dropdown">
             <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-bs-toggle="dropdown">
                 <img src="{{ asset('icon/bell.svg') }}"
@@ -127,6 +84,8 @@
                 <h6 class="p-3 mb-0 text-center">See all notifications</h6>
             </div>
         </li>
+
+        {{-- Thông tin người dùng --}}
         <li class="nav-item nav-profile dropdown">
             <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
                 @if (auth()->check())

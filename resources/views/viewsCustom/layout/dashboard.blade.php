@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Purple Admin</title>
+    <title>Web đặt đơn</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="{{ asset('viewsCustom/assets/vendors/mdi/css/materialdesignicons.min.css') }}">
     <link rel="stylesheet" href="{{ asset('viewsCustom/assets/vendors/css/vendor.bundle.base.css') }}">
@@ -21,33 +21,36 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap">
 </head>
 
-<body>
+<body style="background: #FFFDF6">
 <!-- Start Header -->
 <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row"
-     style="background: linear-gradient(141deg, rgba(255, 255, 240, 0.04) 0%, rgba(255, 255, 240, 0.02) 100%) !important;
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.30);
-            box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15);">
+     style="width: 100%;
+            flex-shrink: 0;
+            background: linear-gradient(141deg, rgba(255, 255, 240, 0.04) 0%, rgba(255, 255, 240, 0.02) 100%) !important;
+            backdrop-filter: blur(20px);" >
     @include('viewsCustom.layout.include.header')
 </nav>
 <!-- End Header -->
 
 <!-- Start Main Content -->
-<div class="container-fluid page-body-wrapper">
+<div class="container-fluid page-body-wrapper"
+     style="height: 100vh;">
     <!-- Start Sidebar -->
-    @include('viewsCustom.layout.include.sidebar')
+    <div class="sidebar" style="overflow-y: auto; position: sticky; top: 0;">
+        @include('viewsCustom.layout.include.sidebar')
+    </div>
     <!-- End Sidebar -->
 
     <!-- Start main-panel -->
     <div class="main-panel">
         <!-- Start Content -->
-        <div class="content-wrapper">
+        <div class="content-wrapper" style="overflow-y: auto; overflow-x: hidden; padding: 10px;">
             @yield('content')
         </div>
         <!-- End Content -->
 
         <!-- Start Footer -->
-        <footer class="footer">
+        <footer class="footer" style="color: #A6A4A4; border-top: none;">
             @include('viewsCustom.layout.include.footer')
         </footer>
         <!-- End Footer -->
@@ -56,6 +59,44 @@
 
 </div>
 <!-- End Main Content -->
+
+{{--Test--}}
+{{--<nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row"--}}
+{{--     style="width: 100%;--}}
+{{--            flex-shrink: 0;--}}
+{{--            background: linear-gradient(141deg, rgba(255, 255, 240, 0.04) 0%, rgba(255, 255, 240, 0.02) 100%) !important;--}}
+{{--            backdrop-filter: blur(20px);">--}}
+{{--    @include('viewsCustom.layout.include.header')--}}
+{{--</nav>--}}
+{{--<!-- End Header -->--}}
+
+{{--<!-- Start Main Content -->--}}
+{{--<div class="container-fluid page-body-wrapper" style="display: flex; height: 100vh;">--}}
+{{--    <!-- Start Sidebar -->--}}
+{{--    <div class="sidebar" style="flex-shrink: 0; overflow-y: auto; position: sticky; top: 0;">--}}
+{{--        @include('viewsCustom.layout.include.sidebar')--}}
+{{--    </div>--}}
+{{--    <!-- End Sidebar -->--}}
+
+{{--    <!-- Start main-panel -->--}}
+{{--    <div class="main-panel" style="flex-grow: 1;">--}}
+{{--        <!-- Start Content -->--}}
+{{--        <div class="content-wrapper" style="overflow-y: auto;">--}}
+{{--            @yield('content')--}}
+{{--        </div>--}}
+{{--        <!-- End Content -->--}}
+
+{{--        <!-- Start Footer -->--}}
+{{--        <footer class="footer">--}}
+{{--            @include('viewsCustom.layout.include.footer')--}}
+{{--        </footer>--}}
+{{--        <!-- End Footer -->--}}
+{{--    </div>--}}
+{{--    <!-- End main-panel -->--}}
+
+{{--</div>--}}
+{{--<!-- End Main Content -->--}}
+
 
 <!-- container-scroller -->
 <!-- plugins:js -->

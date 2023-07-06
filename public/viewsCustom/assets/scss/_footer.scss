@@ -2,7 +2,7 @@
 
 .footer {
   background: $footer-bg;
-  color: $footer-color;
+  color: #A6A4A4;
   border-top: 1px solid darken($footer-bg, 5%);
   padding: 30px 1rem;
   transition: all $action-transition-duration $action-transition-timing-function;
@@ -12,7 +12,7 @@
   font-size: calc(#{$default-font-size} - 0.05rem);
   font-family: $type1-regular;
   a {
-    color: $success;
+    color: #A6A4A4;
     font-size: inherit;
   }
   @media (max-width: 991px) {
