@@ -2,12 +2,7 @@
     {{-- Logo --}}
     <a class="navbar-brand brand-logo" href="{{ route('homepage') }}" style="background: #FFFDF6">
         <img src="{{ asset('icon/logoHeader.png') }}" alt="logo"
-             style="display: flex;
-                    width: 140px;
-                    height: 60px;
-                    justify-content: center;
-                    align-items: center;
-                    flex-shrink: 0;"/>
+             style="display: flex; width: 140px; height: 60px; justify-content: center; align-items: center; flex-shrink: 0;"/>
     </a>
     {{-- Logo Mobile --}}
     <a class="navbar-brand brand-logo-mini" href="{{ route('homepage') }}">
@@ -16,14 +11,32 @@
 </div>
 <div class="navbar-menu-wrapper d-flex align-items-center justify-content-center">
     {{-- Tìm kiếm --}}
-    <div class="search-field d-none d-md-block">
+    <div class="search-field d-none d-md-block"
+         style="border: 1px solid gray; width: 475px; height: 50px; flex-shrink: 0; border-radius: 15px;
+                background: linear-gradient(227deg, rgba(244, 243, 239, 0.40) 0%, rgba(244, 243, 239, 0.10) 100%); backdrop-filter: blur(20px);">
         <form class="d-flex align-items-center h-100" action="#">
             <div class="input-group">
+                <input type="text" class="form-control" placeholder="Tìm kiếm"
+                       style="  margin-left: 30px;
+                                color: rgba(86, 86, 86, 0.50);
+                                font-size: 14px;
+                                font-family: 'Lato';
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 22.4px;">
                 <div class="input-group-prepend bg-transparent">
-                    <i class="input-group-text border-0 mdi mdi-magnify"></i>
+                    <img src="{{ asset('icon/search.svg') }}" alt="logo"
+                         style="margin-top: 15px;
+                                margin-bottom: 15px;
+                                margin-left: 30px;
+                                display: flex;
+                                width: 20px;
+                                height: 20px;
+                                padding: 0.833px;
+                                justify-content: center;
+                                align-items: center;
+                                flex-shrink: 0;">
                 </div>
-                <input type="text" class="form-control bg-transparent border-2" placeholder="Tìm kiếm của hàng, CTV..."
-                        style="width: 500px;">
             </div>
         </form>
     </div>
@@ -32,8 +45,7 @@
         {{-- Thông báo --}}
         <li class="nav-item dropdown">
             <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-bs-toggle="dropdown">
-                <img src="{{ asset('icon/bell.svg') }}"
-                     style="display: flex;
+                <img src="{{ asset('icon/bell.svg') }}" style="display: flex;
                                         width: 24px;
                                         height: 24px;
                                         padding: 1px;

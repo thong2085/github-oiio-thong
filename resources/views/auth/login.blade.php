@@ -1,26 +1,87 @@
-@extends('layout')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Đăng nhập - Web đặt đơn</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="{{ asset('viewsCustom/assets/vendors/mdi/css/materialdesignicons.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('viewsCustom/assets/vendors/css/vendor.bundle.base.css') }}">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="{{ asset('viewsCustom/assets/css/style.css') }}">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="{{ asset('viewsCustom/assets/images/favicon.ico') }}" />
+</head>
+<body>
+<div class="container-scroller" style="overflow-y: hidden">
+    <div class="container-fluid page-body-wrapper">
+        <div class="content-wrapper d-flex align-items-center auth">
+            <div class="row flex-grow">
+                <div class="col-lg-4 mx-auto">
+                    <div class="auth-form-light text-left p-5" style="border-radius: 10px">
+                        <div class="brand-logo">
+                            <img src="{{ asset('icon/logoPagesAuth.png') }}" alt="logo">
+                        </div>
+                        <h4 style="margin-top: 24px; display: flex; width: 100%; align-items: center; gap: 10px; font-family: 'Lato', sans-serif; font-weight: bold;">
+                            Đăng nhập để tiếp tục.
+                        </h4>
 
-@section('content')
-<x-card>
-    <x-slot name="header">
-        <span class="text-white"><i class="fa-solid fa-right-to-bracket"></i> Đăng nhập</span>
-    </x-slot>
-    <div class="card-body">
-        <x-form type="post" :validate="true">
-            <div class="mb-3">
-                <label class="form-label">{{ __('Email') }}</label>
-                <x-input-email class="w-100" name="email" :required="true" />
+                        <x-form type="post" :validate="true" style="font-family: 'Lato', sans-serif">
+                            <div class="mb-3" style="margin-top: 20px;">
+                                <input class="form-control form-control-lg" type="email" name="email" :required="true" placeholder="Nhập Email"
+                                       style="height: 55px; flex-shrink: 0; border-radius: 5px; border: 1px solid #C7C6C1;"/>
+                            </div>
+                            <div class="mb-3" style="margin-top: 22px">
+                                <input class="form-control form-control-lg" type="password" name="password" :required="true" placeholder="Nhập Password"
+                                       style="height: 55px; flex-shrink: 0; border-radius: 5px; border: 1px solid #C7C6C1;"/>
+                            </div>
+                            <div class="my-2 d-flex justify-content-between align-items-center"
+                                 style="display: flex; width: 100%; height: 10px; justify-content: center; align-items: center; margin-top: 12px">
+                                <div class="form-check" style="color: #333333; font-size: 14px; font-family: 'Lato', sans-serif; font-style: normal; font-weight: 400; line-height: 22.4px;">
+                                    Chưa có tài khoản?
+                                    <a href="{{ route('register.index') }}" class="text-primary" style="color: #E0793F !important; text-decoration: none;">Đăng ký ngay</a>
+                                </div>
+                                <a href="{{ route('password.get') }}" class="auth-link text-black"
+                                   style="color: #333; font-size: 14px; font-family: 'Lato', sans-serif; font-style: normal; font-weight: 400; line-height: 22.4px; text-decoration: none; margin-top: 3px">
+                                    Quên mật khẩu?
+                                </a>
+                            </div>
+                            <button type="submit" class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn"
+                                    style="width: 100%; height: 55px; flex-shrink: 0; border-radius: 5px; margin-top: 22px; font-family: 'Lato', sans-serif; font-weight: bold;
+                                          background: linear-gradient(90deg, #FBC250 0%, #DEA143 24.48%, #F5AE5D 50%, #DE8C49 77.08%, #E0793F 100%)">
+                                Đăng nhập
+                            </button>
+                        </x-form>
+                    </div>
+                </div>
             </div>
-            <div class="mb-3">
-                <label class="form-label">{{ __('Mật khẩu') }}</label>
-                <x-input-password class="w-100" name="password" :required="true" />
-            </div>
-            <div class="mb-3">
-                <x-link href="{{ route('register.index') }}">Chưa có tài khoản? Đăng ký ngay!</x-link>
-                <br><x-link href="{{ route('password.get') }}">Quên mật khẩu?</x-link>
-            </div>
-            <x-button type="submit" class="btn-orange w-100">Đăng nhập</x-button>
-        </x-form>
+        </div>
+        <!-- content-wrapper ends -->
     </div>
-</x-card>
-@endsection
+    <!-- Start Footer -->
+    <footer class="footer" style="border-top: none; width: 100%; background: #F3F3ED">
+        @include('viewsCustom.layout.include.footer')
+    </footer>
+    <!-- End Footer -->
+    <!-- page-body-wrapper ends -->
+
+</div>
+<!-- container-scroller -->
+<!-- plugins:js -->
+<script src="{{ asset('viewsCustom/assets/vendors/js/vendor.bundle.base.js') }}"></script>
+<!-- endinject -->
+<!-- Plugin js for this page -->
+<!-- End plugin js for this page -->
+<!-- inject:js -->
+<script src="{{ asset('viewsCustom/assets/js/off-canvas.js') }}"></script>
+<script src="{{ asset('viewsCustom/assets/js/hoverable-collapse.js') }}"></script>
+<script src="{{ asset('viewsCustom/assets/js/misc.js') }}"></script>
+<!-- endinject -->
+</body>
+</html>

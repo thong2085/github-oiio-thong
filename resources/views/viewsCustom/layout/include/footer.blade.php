@@ -1,9 +1,9 @@
 <div class="container-fluid d-flex justify-content-between">
     {{-- Chính sách --}}
     <span class="text-muted col-8 d-block text-center text-sm-start d-sm-inline-block" style="text-align: left !important;">
-        <a href="#" style="color: #A6A4A4; display: inline-flex; align-items: center; gap: 12px; margin-right: 12px">Chính sách quyền riêng tư</a>
-        <a href="#" style="color: #A6A4A4; display: inline-flex; align-items: center; gap: 12px; margin-right: 12px">Điều khoản và điều kiện giao dịch</a>
-        <a href="#" style="color: #A6A4A4; display: inline-flex; align-items: center; gap: 12px;">Chính sách thanh toán</a>
+        <a href="#" style="color: #A6A4A4; display: inline-flex; align-items: center; gap: 12px; margin-right: 12px; text-decoration: none;">Chính sách quyền riêng tư</a>
+        <a href="#" style="color: #A6A4A4; display: inline-flex; align-items: center; gap: 12px; margin-right: 12px; text-decoration: none;">Điều khoản và điều kiện giao dịch</a>
+        <a href="#" style="color: #A6A4A4; display: inline-flex; align-items: center; gap: 12px; text-decoration: none;">Chính sách thanh toán</a>
     </span>
 
     {{-- Logo --}}
