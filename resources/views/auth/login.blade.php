@@ -19,12 +19,25 @@
     <link rel="shortcut icon" href="{{ asset('viewsCustom/assets/images/favicon.ico') }}" />
 </head>
 <body>
-<div class="container-scroller" style="overflow-y: hidden">
+<div class="container-scroller" style="overflow-y: hidden !important;">
     <div class="container-fluid page-body-wrapper">
         <div class="content-wrapper d-flex align-items-center auth">
+            <style>
+                @media only screen and (min-width: 200px) {
+                    .content-wrapper.auth {
+                        align-items: start;
+                        margin-top: 0px;
+                    }
+                }
+                @media only screen and (min-width: 400px) {
+                    .content-wrapper.auth {
+                        align-items: start;
+                    }
+                }
+            </style>
             <div class="row flex-grow">
                 <div class="col-lg-4 mx-auto">
-                    <div class="auth-form-light text-left p-5" style="border-radius: 10px">
+                    <div class="auth-form-light text-left p-4" style="border-radius: 10px">
                         <div class="brand-logo">
                             <img src="{{ asset('icon/logoPagesAuth.png') }}" alt="logo">
                         </div>
@@ -57,10 +70,33 @@
                                           background: linear-gradient(90deg, #FBC250 0%, #DEA143 24.48%, #F5AE5D 50%, #DE8C49 77.08%, #E0793F 100%)">
                                 Đăng nhập
                             </button>
-                            <div class="form-check" style="color: #333333; font-size: 14px; font-family: 'Lato', sans-serif; font-style: normal; font-weight: 400; line-height: 22.4px; text-align: center">
-                                Chưa có tài khoản?
-                                <a href="{{ route('register.index') }}" class="text-primary" style="color: #E0793F !important; text-decoration: none;">Đăng ký ngay</a>
+                            <div class="form-check" style="color: #333333; font-size: 14px; font-family: 'Lato', sans-serif; font-style: normal; font-weight: 400; line-height: 22.4px; text-align: center;">
+                                <span class="desktop-text">Chưa có tài khoản?
+                                    <a href="{{ route('register.index') }}" class="text-primary" style="color: #E0793F !important; text-decoration: none;">Đăng ký ngay</a>
+                                </span>
+                                <span class="mobile-text">Chưa có tài khoản?
+                                    <a href="{{ route('register.index') }}" class="text-primary" style="color: #E0793F !important; text-decoration: none; margin-bottom: 10px"><br>Đăng ký ngay</a>
+                                </span>
                             </div>
+                            <style>
+                                @media only screen and (max-width: 767px) {
+                                    .desktop-text {
+                                        display: none;
+                                    }
+                                    .mobile-text {
+                                        display: inline-block;
+                                    }
+                                }
+
+                                @media only screen and (min-width: 600px) {
+                                    .desktop-text {
+                                        display: inline-block;
+                                    }
+                                    .mobile-text {
+                                        display: none;
+                                    }
+                                }
+                            </style>
                         </x-form>
                     </div>
                 </div>
@@ -69,7 +105,7 @@
         <!-- content-wrapper ends -->
     </div>
     <!-- Start Footer -->
-    <footer class="footer" style="border-top: none; width: 100%; background: #F3F3ED">
+    <footer class="footer" style="border-top: none; width: 100%; background: #F3F3ED; position: fixed; bottom: 0;">
         @include('viewsCustom.layout.include.footer')
     </footer>
     <!-- End Footer -->
