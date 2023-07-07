@@ -29,26 +29,26 @@
                             <img src="{{ asset('icon/logoPagesAuth.png') }}" alt="logo">
                         </div>
                         <h4 style="margin-top: 24px; display: flex; width: 100%; align-items: center; gap: 10px; font-family: 'Lato', sans-serif; font-weight: bold;">
-                            Đăng nhập để tiếp tục.
+                            Đăng nhập để đặt đơn
                         </h4>
 
                         <x-form type="post" :validate="true" style="font-family: 'Lato', sans-serif">
                             <div class="mb-3" style="margin-top: 20px;">
                                 <input class="form-control form-control-lg" type="email" name="email" :required="true" placeholder="Nhập Email"
-                                       style="height: 55px; flex-shrink: 0; border-radius: 5px; border: 1px solid #C7C6C1;"/>
+                                       style="height: 55px; flex-shrink: 0; border-radius: 5px; border: 1px solid #C7C6C1; font-family: 'Lato', sans-serif;"/>
                             </div>
                             <div class="mb-3" style="margin-top: 22px">
                                 <input class="form-control form-control-lg" type="password" name="password" :required="true" placeholder="Nhập Password"
-                                       style="height: 55px; flex-shrink: 0; border-radius: 5px; border: 1px solid #C7C6C1;"/>
+                                       style="height: 55px; flex-shrink: 0; border-radius: 5px; border: 1px solid #C7C6C1; font-family: 'Lato', sans-serif;"/>
                             </div>
                             <div class="my-2 d-flex justify-content-between align-items-center"
                                  style="display: flex; width: 100%; height: 10px; justify-content: center; align-items: center; margin-top: 12px">
-                                <div class="form-check" style="color: #333333; font-size: 14px; font-family: 'Lato', sans-serif; font-style: normal; font-weight: 400; line-height: 22.4px;">
-                                    Chưa có tài khoản?
-                                    <a href="{{ route('register.index') }}" class="text-primary" style="color: #E0793F !important; text-decoration: none;">Đăng ký ngay</a>
-                                </div>
+                                <label class="remember" style="display: flex; justify-content: left; align-items: center;gap: 10px;">
+                                    <input type="checkbox" class="checkbox" />
+                                    <span style="color: #AEAEAE; font-size: 14px; font-family: 'Lato', sans-serif; font-weight: 400; line-height: 22.40px; word-wrap: break-word">Ghi nhớ tôi</span>
+                                </label>
                                 <a href="{{ route('password.get') }}" class="auth-link text-black"
-                                   style="color: #333; font-size: 14px; font-family: 'Lato', sans-serif; font-style: normal; font-weight: 400; line-height: 22.4px; text-decoration: none; margin-top: 3px">
+                                   style="color: #333; font-size: 14px; font-family: 'Lato', sans-serif; font-style: normal; font-weight: 400; line-height: 22.4px; text-decoration: none;">
                                     Quên mật khẩu?
                                 </a>
                             </div>
@@ -57,6 +57,10 @@
                                           background: linear-gradient(90deg, #FBC250 0%, #DEA143 24.48%, #F5AE5D 50%, #DE8C49 77.08%, #E0793F 100%)">
                                 Đăng nhập
                             </button>
+                            <div class="form-check" style="color: #333333; font-size: 14px; font-family: 'Lato', sans-serif; font-style: normal; font-weight: 400; line-height: 22.4px; text-align: center">
+                                Chưa có tài khoản?
+                                <a href="{{ route('register.index') }}" class="text-primary" style="color: #E0793F !important; text-decoration: none;">Đăng ký ngay</a>
+                            </div>
                         </x-form>
                     </div>
                 </div>

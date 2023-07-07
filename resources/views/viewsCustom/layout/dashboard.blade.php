@@ -50,7 +50,7 @@
         <!-- End Content -->
 
         <!-- Start Footer -->
-        <footer class="footer" style="border-top: none; width: 100%; background: #F3F3ED">
+        <footer class="footer" style="border-top: none; width: 100%; margin-top: 0px; background: #F3F3ED">
             @include('viewsCustom.layout.include.footer')
         </footer>
         <!-- End Footer -->
@@ -59,44 +59,6 @@
 
 </div>
 <!-- End Main Content -->
-
-{{--Test--}}
-{{--<nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row"--}}
-{{--     style="width: 100%;--}}
-{{--            flex-shrink: 0;--}}
-{{--            background: linear-gradient(141deg, rgba(255, 255, 240, 0.04) 0%, rgba(255, 255, 240, 0.02) 100%) !important;--}}
-{{--            backdrop-filter: blur(20px);">--}}
-{{--    @include('viewsCustom.layout.include.header')--}}
-{{--</nav>--}}
-{{--<!-- End Header -->--}}
-
-{{--<!-- Start Main Content -->--}}
-{{--<div class="container-fluid page-body-wrapper" style="display: flex; height: 100vh;">--}}
-{{--    <!-- Start Sidebar -->--}}
-{{--    <div class="sidebar" style="flex-shrink: 0; overflow-y: auto; position: sticky; top: 0;">--}}
-{{--        @include('viewsCustom.layout.include.sidebar')--}}
-{{--    </div>--}}
-{{--    <!-- End Sidebar -->--}}
-
-{{--    <!-- Start main-panel -->--}}
-{{--    <div class="main-panel" style="flex-grow: 1;">--}}
-{{--        <!-- Start Content -->--}}
-{{--        <div class="content-wrapper" style="overflow-y: auto;">--}}
-{{--            @yield('content')--}}
-{{--        </div>--}}
-{{--        <!-- End Content -->--}}
-
-{{--        <!-- Start Footer -->--}}
-{{--        <footer class="footer">--}}
-{{--            @include('viewsCustom.layout.include.footer')--}}
-{{--        </footer>--}}
-{{--        <!-- End Footer -->--}}
-{{--    </div>--}}
-{{--    <!-- End main-panel -->--}}
-
-{{--</div>--}}
-{{--<!-- End Main Content -->--}}
-
 
 <!-- container-scroller -->
 <!-- plugins:js -->
