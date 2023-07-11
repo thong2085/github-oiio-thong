@@ -70,7 +70,7 @@ abstract class BaseDataTable extends DataTable
             // 'searchDelay' => 350,
             'lengthMenu' => [ [10, 25, 50, -1], [20, 50, 100, "All"] ],
             'language' => [
-                'url' => url('/public/libs/datatables/language.json')
+                'url' => url('libs/datatables/language.json')
             ]
         ];
     }

@@ -34,7 +34,7 @@
 
 @push('libs-js')
 <!-- button in datatable -->
-<script src="{{ asset('/public/vendor/datatables/buttons.server-side.js') }}"></script>
+<script src="{{ asset('vendor/datatables/buttons.server-side.js') }}"></script>
 <script src="https://cdn.datatables.net/select/1.6.2/js/dataTables.select.min.js"></script>
 @endpush
 
