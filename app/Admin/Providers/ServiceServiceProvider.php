@@ -14,6 +14,7 @@ class ServiceServiceProvider extends ServiceProvider
         'App\Admin\Services\Job\JobServiceInterface' => 'App\Admin\Services\Job\JobService',
         'App\Admin\Services\Bank\BankServiceInterface' => 'App\Admin\Services\Bank\BankService',
         'App\Admin\Services\News\NewsServiceInterface' => 'App\Admin\Services\News\NewsService',
+        'App\Admin\Services\Privacy\PrivacyServiceInterface' => 'App\Admin\Services\Privacy\PrivacyService',
         'App\Admin\Services\Transaction\TransactionServiceInterface' => 'App\Admin\Services\Transaction\TransactionService',
     ];
     /**

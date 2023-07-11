@@ -118,7 +118,7 @@ return [
                 'routeName' => 'admin.transaction.withdrawn.index',
                 'icon' => '<i class="ti ti-menu"></i>',
                 'roles' => [],
-            ],          
+            ],
         ]
     ],
     [
@@ -155,12 +155,35 @@ return [
         'sub' => [
             [
                 'title' => 'Thêm tin tức',
-                'routeName' => 'admin.news.index',
+                'routeName' => 'admin.news.create',
                 'icon' => '<i class="ti ti-plus"></i>',
                 'roles' => [],
             ],
             [
                 'title' => 'DS tin tức',
+                'routeName' => 'admin.news.index',
+                'icon' => '<i class="ti ti-list"></i>',
+                'roles' => [],
+            ],
+        ]
+    ],
+    [
+        'title' => 'Chính sách',
+        'routeName' => null,
+        'icon' => '<i class="ti ti-book"></i>',
+        'roles' => [
+            App\Enums\Admin\AdminRoles::SuperAdmin,
+            App\Enums\Admin\AdminRoles::Admin
+        ],
+        'sub' => [
+            [
+                'title' => 'Thêm mới chính sách',
+                'routeName' => 'admin.privacy.create',
+                'icon' => '<i class="ti ti-list"></i>',
+                'roles' => [],
+            ],
+            [
+                'title' => 'Danh sách chính sách',
                 'routeName' => 'admin.news.index',
                 'icon' => '<i class="ti ti-list"></i>',
                 'roles' => [],

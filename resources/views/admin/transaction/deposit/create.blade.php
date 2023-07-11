@@ -1,7 +1,7 @@
 @extends('admin.layouts.master')
 @push('libs-css')
-    <link rel="stylesheet" href="{{ asset('/public/libs/select2/dist/css/select2.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('/public/libs/select2/dist/css/select2-bootstrap-5-theme.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('libs/select2/dist/css/select2.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('libs/select2/dist/css/select2-bootstrap-5-theme.min.css') }}">
 @endpush
 @section('content')
     <div class="page-header d-print-none">
@@ -34,6 +34,6 @@
 @endsection
 @push('custom-js')
     @include('admin.transaction.deposit.scripts.create_script')
-    <script src="{{ asset('/public/libs/select2/dist/js/select2.min.js') }}"></script>
-    <script src="{{ asset('/public/libs/select2/dist/js/i18n/vi.js') }}"></script>
+    <script src="{{ asset('libs/select2/dist/js/select2.min.js') }}"></script>
+    <script src="{{ asset('libs/select2/dist/js/i18n/vi.js') }}"></script>
 @endpush

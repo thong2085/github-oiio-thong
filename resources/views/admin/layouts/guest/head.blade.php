@@ -5,7 +5,7 @@
 <title>@yield('title', 'Admin')</title>
 <link rel="shortcut icon" type="image/x-icon" href="{{ asset(config('custom.images.favicon')) }}" />
 <!-- CSS files -->
-<link href="{{ asset('/public/libs/tabler/dist/css/tabler.min.css') }}" rel="stylesheet"/>
+<link href="{{ asset('libs/tabler/dist/css/tabler.min.css') }}" rel="stylesheet"/>
 <link href="{{ asset('libs/jquery-toast-plugin/jquery.toast.min.css') }}" rel="stylesheet"
     type="text/css">
 <link href="{{ asset('libs/Parsley.js-2.9.2/style.css') }}" rel="stylesheet">
@@ -20,4 +20,3 @@
 </style>
 @stack('libs-css')
 @stack('custom-css')
-    

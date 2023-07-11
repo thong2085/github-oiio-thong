@@ -1,13 +1,12 @@
 <?php
 
-namespace App\Admin\Services\News;
+namespace App\Admin\Services\Privacy;
 use Illuminate\Http\Request;
 
-interface NewsServiceInterface
+interface PrivacyServiceInterface
 {
     /**
      * Tạo mới
-     *
      *
      * @var Illuminate\Http\Request $request
      *

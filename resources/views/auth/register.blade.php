@@ -89,46 +89,45 @@
                             <img src="{{ asset('icon/logoPagesAuth.png') }}" alt="logo">
                         </div>
                         <h4 style="margin-top: 24px; display: flex; width: 100%; align-items: center; gap: 10px; font-family: 'Lato', sans-serif; font-weight: bold;">
-                            Đăng ký để đặt đơn.
+                            Đăng ký để đặt đơn
                         </h4>
-
-                        <x-form type="post" :validate="true" style="font-family: 'Lato', sans-serif">
+                        <x-form class="web" type="post" :validate="true" style="font-family: 'Lato', sans-serif">
                             <div class="mb-3" style="margin-top: 15px;">
-                                <x-input class="form-control form-control-lg" type="text" name="fullname" placeholder="Họ và tên" required
+                                <x-input class="form-control form-control-flush" type="text" name="fullname" placeholder="Họ và tên" required
                                        style="height: 30px !important; flex-shrink: 0; border-radius: 5px; border: 1px solid #C7C6C1; font-family: 'Lato', sans-serif;"/>
                             </div>
 
                             <div class="mb-3" style="margin-top: 15px">
-                                <x-input class="form-control form-control-lg" type="text" name="username" placeholder="Tên đăng nhập"
-                                       style="height: 40px; flex-shrink: 0; border-radius: 5px; border: 1px solid #C7C6C1; font-family: 'Lato', sans-serif;"/>
+                                <x-input class="form-control form-control-flush" type="text" name="username" placeholder="Tên đăng nhập"
+                                       style="height: 30px; flex-shrink: 0; border-radius: 5px; border: 1px solid #C7C6C1; font-family: 'Lato', sans-serif;"/>
                                 <p id="errorName" class="text-left text-danger mb-2"></p>
                             </div>
 
                             <div class="mb-3" style="margin-top: 15px">
-                                <x-input class="form-control form-control-lg" type="text" name="phone" placeholder="Số điện thoại"
-                                         style="height: 40px; flex-shrink: 0; border-radius: 5px; border: 1px solid #C7C6C1; font-family: 'Lato', sans-serif;"/>
+                                <x-input class="form-control form-control-flush" type="text" name="phone" placeholder="Số điện thoại"
+                                         style="height: 30px; flex-shrink: 0; border-radius: 5px; border: 1px solid #C7C6C1; font-family: 'Lato', sans-serif;"/>
                                 <p id="errorPhone" class="text-danger text-left mb-2"></p>
                             </div>
 
                             <div class="mb-3" style="margin-top: 15px">
-                                <x-input id="email" class="form-control form-control-lg email" type="email" name="email" placeholder="Email"
-                                         style="height: 40px; flex-shrink: 0; border-radius: 5px; border: 1px solid #C7C6C1; font-family: 'Lato', sans-serif;"/>
+                                <x-input id="email" class="form-control form-control-flush email" type="email" name="email" placeholder="Email"
+                                         style="height: 30px; flex-shrink: 0; border-radius: 5px; border: 1px solid #C7C6C1; font-family: 'Lato', sans-serif;"/>
                                 <p id="errorEmail" class="text-danger text-left mb-2"></p>
                             </div>
 
                             <div class="mb-3" style="margin-top: 15px">
-                                <x-input id="password" class="form-control form-control-lg" type="password" name="password" placeholder="Mật khẩu"
-                                       style="height: 40px; flex-shrink: 0; border-radius: 5px; border: 1px solid #C7C6C1; font-family: 'Lato', sans-serif;"/>
+                                <x-input id="password" class="form-control form-control-flush" type="password" name="password" placeholder="Mật khẩu"
+                                       style="height: 30px; flex-shrink: 0; border-radius: 5px; border: 1px solid #C7C6C1; font-family: 'Lato', sans-serif;"/>
                                 <p id="errorPassword" class="text-danger text-left mb-2"></p>
                             </div>
 
                             <div class="mb-3" style="margin-top: 15px">
-                                <x-input id="password-confirm" class="form-control form-control-lg" type="password" name="confirm-password" placeholder="Nhập lại mật khẩu"
-                                         style="height: 40px; flex-shrink: 0; border-radius: 5px; border: 1px solid #C7C6C1; font-family: 'Lato', sans-serif;"/>
+                                <x-input id="password-confirm" class="form-control form-control-flush" type="password" name="confirm-password" placeholder="Nhập lại mật khẩu"
+                                         style="height: 30px; flex-shrink: 0; border-radius: 5px; border: 1px solid #C7C6C1; font-family: 'Lato', sans-serif;"/>
                                 <p id="errorConfirm" class="text-danger text-left mb-2"></p>
                             </div>
 
-                            <div class="mb-0" style="margin-top: 15px">
+                            <div class="mb-0" style="margin-top: 15px;">
                                 <label class="anim" style="display: flex; justify-content: left; align-items: center;gap: 10px;">
                                     <input type="checkbox" class="checkbox" required="" />
                                     <span style="color: #AEAEAE; font-size: 14px; font-family: 'Lato', sans-serif; font-weight: 400; line-height: 22.40px; word-wrap: break-word">
@@ -140,11 +139,12 @@
                                 </label>
                                 <div class="clear"> </div>
                             </div>
-                            <button type="submit" class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn"
-                                    style="width: 100%; height: 55px; flex-shrink: 0; border-radius: 5px; margin-top: 15px; font-family: 'Lato', sans-serif; font-weight: bold;
-                                          background: linear-gradient(90deg, #FBC250 0%, #DEA143 24.48%, #F5AE5D 50%, #DE8C49 77.08%, #E0793F 100%)">
-                                Đăng ký
+                            <button type="submit" class="btn-warning"
+                                    style="width: 100%; height: 30px; flex-shrink: 0; border-radius: 5px; margin-top: 10px;
+                                           background: linear-gradient(90deg, #FBC250 0%, #DEA143 24.48%, #F5AE5D 50%, #DE8C49 77.08%, #E0793F 100%); border: none;">
+                                <span style="color: #FFF; font-size: 16px; font-family: 'Lato', sans-serif; font-style: normal; font-weight: 700; line-height: 22.4px;">Đăng ký</span>
                             </button>
+
 
                             <div class="mb-0" style="width: 100%; align-items: center; gap: 10px; margin-top: 20px; text-align: center;">
                                 <p style="color: #333; font-size: 14px; font-family: 'Lato', sans-serif; font-style: normal; font-weight: 400; line-height: 22.4px;">
@@ -159,7 +159,7 @@
         <!-- content-wrapper ends -->
     </div>
     <!-- Start Footer -->
-    <footer class="footer" style="border-top: none; width: 100%; background: #F3F3ED">
+    <footer class="footer" style="border-top: none; width: 100%; background: #F3F3ED; position: fixed; bottom: 0;">
         @include('viewsCustom.layout.include.footer')
     </footer>
     <!-- End Footer -->

@@ -50,7 +50,7 @@ Route::group(['middleware' => 'admin.auth:admin'], function(){
                 Route::post('/options/them', 'store')->name('store');
                 Route::delete('/{attribute_id}/options/xoa/{id}', 'delete')->name('delete');
             });
-            
+
             Route::controller(App\Admin\Http\Controllers\Attribute\AttributeController::class)
             ->group(function(){
                 Route::get('/them', 'create')->name('create');
@@ -98,10 +98,22 @@ Route::group(['middleware' => 'admin.auth:admin'], function(){
             // Route::get('/select-search', [AdminSearchController::class, 'selectSearch'])->name('selectsearch');
         });
     });
-    
+
     //news
     Route::prefix('/manager-news')->as('news.')->group(function () {
         Route::controller(App\Admin\Http\Controllers\News\NewsController::class)->group(function () {
+            Route::get('/', 'index')->name('index');
+            Route::get('/sua/{id}', 'edit')->name('edit');
+            Route::put('/sua', 'update')->name('update');
+            Route::get('/them', 'create')->name('create');
+            Route::post('/them', 'store')->name('store');
+            Route::delete('/xoa/{id}', 'delete')->name('delete');
+        });
+    });
+
+    //privacy
+    Route::prefix('/manager-privacy')->as('privacy.')->group(function () {
+        Route::controller(App\Admin\Http\Controllers\Privacy\PrivacyController::class)->group(function () {
             Route::get('/', 'index')->name('index');
             Route::get('/sua/{id}', 'edit')->name('edit');
             Route::put('/sua', 'update')->name('update');

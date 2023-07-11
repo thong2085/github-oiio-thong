@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Admin\DataTables\News;
+namespace App\Admin\DataTables\Privacy;
 
 use App\Admin\DataTables\BaseDataTable;
-use App\Admin\Repositories\News\NewsRepositoryInterface;
+use App\Admin\Repositories\Privacy\PrivacyRepositoryInterface;
 use App\Admin\Traits\GetConfig;
 
-class NewsDataTable extends BaseDataTable
+class PrivacyDataTable extends BaseDataTable
 {
 
     use GetConfig;
@@ -14,7 +14,7 @@ class NewsDataTable extends BaseDataTable
     protected array $actions = ['reset', 'reload'];
 
     public function __construct(
-        NewsRepositoryInterface $repository
+        PrivacyRepositoryInterface $repository
     ){
         parent::__construct();
 
@@ -23,8 +23,8 @@ class NewsDataTable extends BaseDataTable
 
     public function getView(){
         return [
-            'action' => 'admin.news.datatable.action',
-            'editlink' => 'admin.news.datatable.editlink',
+            'action' => 'admin.privacy.datatable.action',
+            'editlink' => 'admin.privacy.datatable.editlink',
         ];
     }
 
@@ -40,7 +40,7 @@ class NewsDataTable extends BaseDataTable
         return $this->instanceDataTable;
     }
 
-    public function query(\App\Models\News $model)
+    public function query(\App\Models\Privacy $model)
     {
         return $model->newQuery();
     }
@@ -48,12 +48,12 @@ class NewsDataTable extends BaseDataTable
     public function html()
     {
         $this->instanceHtml = $this->builder()
-        ->setTableId('userTable')
-        ->columns($this->getColumns())
-        ->minifiedAjax()
-        ->dom('Bfrtip')
-        ->orderBy(0)
-        ->selectStyleSingle();
+            ->setTableId('userTable')
+            ->columns($this->getColumns())
+            ->minifiedAjax()
+            ->dom('Bfrtip')
+            ->orderBy(0)
+            ->selectStyleSingle();
 
         $this->htmlParameters();
 
@@ -66,7 +66,7 @@ class NewsDataTable extends BaseDataTable
 
     protected function filename(): string
     {
-        return 'News_' . date('YmdHis');
+        return 'Privacy_' . date('YmdHis');
     }
 
     protected function filterColumnCreatedAt(){
