@@ -9,7 +9,7 @@
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}"
                                     class="text-muted">{{ __('Dashboard') }}</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">{{ __('Chính sách quyền riêng tư') }}</li>
+                            <li class="breadcrumb-item active" aria-current="page">{{ __('Chính sách oiio.vn') }}</li>
                         </ol>
                     </nav>
                 </div>
@@ -20,8 +20,8 @@
         <div class="container-xl">
             <div class="card">
                 <div class="card-header justify-content-between">
-                    <h2 class="mb-0">{{ __('Danh sách tin tức') }}</h2>
-                    <x-link :href="route('admin.news.create')" class="btn btn-primary"><i class="ti ti-plus"></i>{{ __('Thêm tin tức') }}</x-link>
+                    <h2 class="mb-0">{{ __('Danh sách chính sách') }}</h2>
+                    <x-link :href="route('admin.privacy.create')" class="btn btn-primary"><i class="ti ti-plus"></i>{{ __('Thêm chính sách') }}</x-link>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive position-relative">
@@ -42,7 +42,7 @@
 
 {{ $dataTable->scripts() }}
 
-@include('admin.news.scripts.datatable')
+@include('admin.privacy.scripts.datatable')
 <script>
 $(document).ready(function(){
     // define columns for the datatables

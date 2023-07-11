@@ -184,7 +184,7 @@ return [
             ],
             [
                 'title' => 'Danh sách chính sách',
-                'routeName' => 'admin.news.index',
+                'routeName' => 'admin.privacy.index',
                 'icon' => '<i class="ti ti-list"></i>',
                 'roles' => [],
             ],

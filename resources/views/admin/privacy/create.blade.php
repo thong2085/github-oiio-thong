@@ -9,7 +9,7 @@
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}"
                                     class="text-muted">{{ __('Dashboard') }}</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">{{ __('Chính sách quyền riêng tư') }}</li>
+                            <li class="breadcrumb-item active" aria-current="page">{{ __('Thêm mới chính sách') }}</li>
                         </ol>
                     </nav>
                 </div>

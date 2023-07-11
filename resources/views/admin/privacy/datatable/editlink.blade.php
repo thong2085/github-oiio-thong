@@ -1,1 +1,1 @@
-<x-link :href="route('admin.news.edit', $id)" :title="$title"/>
+<x-link :href="route('admin.privacy.edit', $id)" :title="$title"/>
