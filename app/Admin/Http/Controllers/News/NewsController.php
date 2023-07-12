@@ -7,22 +7,22 @@ use App\Admin\Http\Requests\News\NewsRequest;
 use App\Admin\Repositories\News\NewsRepositoryInterface;
 use App\Admin\Services\News\NewsServiceInterface;
 use App\Admin\DataTables\News\NewsDataTable;
-    
+
 class NewsController extends Controller
 {
     protected $repositoryAdmin;
 
     public function __construct(
-        NewsRepositoryInterface $repository, 
+        NewsRepositoryInterface $repository,
         NewsServiceInterface $service
     ){
 
         parent::__construct();
 
         $this->repository = $repository;
-        
+
         $this->service = $service;
-        
+
     }
 
     public function getView(){

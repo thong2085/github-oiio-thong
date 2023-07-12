@@ -61,7 +61,7 @@ class PrivacyDataTable extends BaseDataTable
     }
 
     protected function setCustomColumns(){
-        $this->customColumns = $this->traitGetConfigDatatableColumns('news');
+        $this->customColumns = $this->traitGetConfigDatatableColumns('privacies');
     }
 
     protected function filename(): string
