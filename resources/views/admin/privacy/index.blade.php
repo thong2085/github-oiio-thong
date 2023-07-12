@@ -8,8 +8,8 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}"
-                                    class="text-muted">{{ __('Dashboard') }}</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">{{ __('Chính sách oiio.vn') }}</li>
+                                                           class="text-muted">{{ __('Dashboard') }}</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">{{ __('Danh sách chính sách') }}</li>
                         </ol>
                     </nav>
                 </div>
@@ -28,26 +28,26 @@
                         {{ $dataTable->table(['class' => 'table table-bordered', 'style' => 'min-width: 900px;'], true) }}
                     </div>
                 </div>
+            </div>
         </div>
-    </div>
-@endsection
+        @endsection
 
-@push('libs-js')
-<!-- button in datatable -->
-<script src="{{ asset('vendor/datatables/buttons.server-side.js') }}"></script>
-<script src="https://cdn.datatables.net/select/1.6.2/js/dataTables.select.min.js"></script>
-@endpush
+        @push('libs-js')
+            <!-- button in datatable -->
+            <script src="{{ asset('vendor/datatables/buttons.server-side.js') }}"></script>
+            <script src="https://cdn.datatables.net/select/1.6.2/js/dataTables.select.min.js"></script>
+        @endpush
 
-@push('custom-js')
+        @push('custom-js')
 
-{{ $dataTable->scripts() }}
+            {{ $dataTable->scripts() }}
 
-@include('admin.privacy.scripts.datatable')
-<script>
-$(document).ready(function(){
-    // define columns for the datatables
-    columns = window.LaravelDataTables["userTable"].columns();
-    toggleColumnsDatatable(columns);
-});
-</script>
-@endpush
+            @include('admin.privacy.scripts.datatable')
+            <script>
+                $(document).ready(function(){
+                    // define columns for the datatables
+                    columns = window.LaravelDataTables["userTable"].columns();
+                    toggleColumnsDatatable(columns);
+                });
+            </script>
+    @endpush
