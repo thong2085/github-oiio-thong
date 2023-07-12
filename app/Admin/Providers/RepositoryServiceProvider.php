@@ -20,6 +20,7 @@ class RepositoryServiceProvider extends ServiceProvider
         'App\Admin\Repositories\Job\ReportJobRepositoryInterface' => 'App\Admin\Repositories\Job\ReportJobRepository',
         'App\Admin\Repositories\News\NewsRepositoryInterface' => 'App\Admin\Repositories\News\NewsRepository',
         'App\Admin\Repositories\Privacy\PrivacyRepositoryInterface' => 'App\Admin\Repositories\Privacy\PrivacyRepository',
+        'App\Admin\Repositories\Tutorial\TutorialRepositoryInterface' => 'App\Admin\Repositories\Tutorial\TutorialRepository',
     ];
     /**
      * Register services.

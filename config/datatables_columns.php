@@ -277,6 +277,50 @@ return [
             'addClass' => 'text-center'
         ],
     ],
+    'privacies' => [
+        'DT_RowIndex' => [
+            'title' => 'STT',
+            'width' => '20px',
+            'orderable' => false
+        ],
+        'title' => [
+            'title' => 'Tiêu đề chính sách',
+            'orderable' => false,
+        ],
+        'created_at' => [
+            'title' => 'Ngày tạo',
+            'orderable' => false,
+        ],
+        'action' => [
+            'title' => 'Thao tác',
+            'orderable' => false,
+            'exportable' => false,
+            'printable' => false,
+            'addClass' => 'text-center'
+        ],
+    ],
+    'tutorials' => [
+        'DT_RowIndex' => [
+            'title' => 'STT',
+            'width' => '20px',
+            'orderable' => false
+        ],
+        'title' => [
+            'title' => 'Tiêu đề hướng dẫn',
+            'orderable' => false,
+        ],
+        'created_at' => [
+            'title' => 'Ngày tạo',
+            'orderable' => false,
+        ],
+        'action' => [
+            'title' => 'Thao tác',
+            'orderable' => false,
+            'exportable' => false,
+            'printable' => false,
+            'addClass' => 'text-center'
+        ],
+    ],
     'withdrawn' => [
         'DT_RowIndex' => [
             'title' => 'STT',

@@ -179,12 +179,35 @@ return [
             [
                 'title' => 'Thêm mới chính sách',
                 'routeName' => 'admin.privacy.create',
-                'icon' => '<i class="ti ti-list"></i>',
+                'icon' => '<i class="ti ti-plus"></i>',
                 'roles' => [],
             ],
             [
                 'title' => 'Danh sách chính sách',
                 'routeName' => 'admin.privacy.index',
+                'icon' => '<i class="ti ti-list"></i>',
+                'roles' => [],
+            ],
+        ]
+    ],
+    [
+        'title' => 'Hướng dẫn người dùng',
+        'routeName' => null,
+        'icon' => '<i class="ti ti-microphone"></i>',
+        'roles' => [
+            App\Enums\Admin\AdminRoles::SuperAdmin,
+            App\Enums\Admin\AdminRoles::Admin
+        ],
+        'sub' => [
+            [
+                'title' => 'Thêm mới hướng dẫn',
+                'routeName' => 'admin.tutorial.create',
+                'icon' => '<i class="ti ti-plus"></i>',
+                'roles' => [],
+            ],
+            [
+                'title' => 'Danh sách hướng dẫn',
+                'routeName' => 'admin.tutorial.index',
                 'icon' => '<i class="ti ti-list"></i>',
                 'roles' => [],
             ],

@@ -123,6 +123,18 @@ Route::group(['middleware' => 'admin.auth:admin'], function(){
         });
     });
 
+    //tutorial
+    Route::prefix('/manager-tutorial')->as('tutorial.')->group(function () {
+        Route::controller(App\Admin\Http\Controllers\Tutorial\TutorialController::class)->group(function () {
+            Route::get('/', 'index')->name('index');
+            Route::get('/sua/{id}', 'edit')->name('edit');
+            Route::put('/sua', 'update')->name('update');
+            Route::get('/them', 'create')->name('create');
+            Route::post('/them', 'store')->name('store');
+            Route::delete('/xoa/{id}', 'delete')->name('delete');
+        });
+    });
+
     //ckfinder
     Route::prefix('/quan-ly-file')->as('ckfinder.')->group(function () {
         Route::any('/ket-noi', '\CKSource\CKFinderBridge\Controller\CKFinderController@requestAction')
