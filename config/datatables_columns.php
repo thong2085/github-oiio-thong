@@ -309,6 +309,10 @@ return [
             'title' => 'Tiêu đề hướng dẫn',
             'orderable' => false,
         ],
+        'link' => [
+            'title' => 'Link Youtube hướng dẫn',
+            'orderable' => false,
+        ],
         'created_at' => [
             'title' => 'Ngày tạo',
             'orderable' => false,
@@ -373,7 +377,7 @@ return [
             'orderable' => false,
             'addClass' => 'text-center align-middle'
         ],
-      
+
         'amount' => [
             'title' => 'Số tiền',
             'orderable' => false,
@@ -430,7 +434,7 @@ return [
             'title' => 'Phí rút',
             'orderable' => false,
         ],
-       
+
         'created_at' => [
             'title' => 'Ngày tạo',
             'orderable' => false,

@@ -23,7 +23,7 @@
             <div class="col-12">
                 <div class="form-group">
                     <label for="">{{ __('Link Youtube hướng dẫn') }}</label>
-                    <x-input name="link" :value="$tutorial->title" :required="true" :placeholder="__('Link Youtube hướng dẫn')" />
+                    <x-input name="link" :value="$tutorial->link" :required="true" :placeholder="__('Link Youtube hướng dẫn')" />
                 </div>
             </div>
         </div>

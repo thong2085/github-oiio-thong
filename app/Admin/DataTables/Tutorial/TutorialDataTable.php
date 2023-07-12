@@ -34,6 +34,7 @@ class TutorialDataTable extends BaseDataTable
         $this->filterColumnCreatedAt();
         $this->editColumnId();
         $this->editColumnTitle();
+        $this->editColumnLink();
         $this->editColumnCreatedAt();
         $this->addColumnAction();
         $this->rawColumnsNew();
@@ -81,6 +82,9 @@ class TutorialDataTable extends BaseDataTable
         $this->instanceDataTable = $this->instanceDataTable->editColumn('id', $this->view['editlink']);
     }
     protected function editColumnTitle(){
+        $this->instanceDataTable = $this->instanceDataTable->editColumn('title', $this->view['editlink']);
+    }
+    protected function editColumnLink(){
         $this->instanceDataTable = $this->instanceDataTable->editColumn('title', $this->view['editlink']);
     }
     protected function editColumnCreatedAt(){

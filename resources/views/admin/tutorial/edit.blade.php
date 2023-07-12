@@ -19,10 +19,10 @@
     <div class="page-body">
         <div class="container-xl">
             <x-form :action="route('admin.tutorial.update')" type="put" :validate="true">
-                <x-input type="hidden" name="id" :value="$tutorials->id" />
+                <x-input type="hidden" name="id" :value="$tutorial->id" />
                 <x-input type="hidden" name="admin_id" :value="auth()->guard('admin')->user()->id" />
                 <div class="row justify-content-center">
-                    @include('admin.tutorial.forms.form-edit', ['tutorial' => $tutorials])
+                    @include('admin.tutorial.forms.form-edit', ['tutorial' => $tutorial])
                 </div>
             </x-form>
         </div>

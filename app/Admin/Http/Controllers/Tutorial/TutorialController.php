@@ -55,7 +55,7 @@ class TutorialController extends Controller
 
     public function update(TutorialRequest $request){
         $this->service->update($request);
-        return back()->with('success', __('notifySuccess'));
+        return redirect()->route($this->view['index'])->with('success', __('notifySuccess'));
     }
 
     public function delete($id){
