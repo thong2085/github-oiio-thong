@@ -32,6 +32,8 @@ class EventServiceProvider extends ServiceProvider
         \App\Models\Transaction::observe(\App\Observers\TransactionObserver::class);
         \App\Models\User::observe(\App\Observers\UserObserver::class);
         \App\Models\News::observe(\App\Observers\NewsObserver::class);
+        \App\Models\Privacy::observe(\App\Observers\PrivacyObserver::class);
+        \App\Models\Tutorial::observe(\App\Observers\TutorialObserver::class);
         \App\Models\Deposit::observe(\App\Observers\DepositObserver::class);
         \App\Models\Withdrawn::observe(\App\Observers\WithdrawnObserver::class);
     }
