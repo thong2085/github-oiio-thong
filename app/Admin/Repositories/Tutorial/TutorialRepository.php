@@ -29,7 +29,7 @@ class TutorialRepository extends EloquentRepository implements TutorialRepositor
         });
     }
 
-    public function getQueryBuilderOrderBy($column = 'id', $sort = 'DESC'){
+    public function getQueryBuilderOrderBy($column = 'id', $sort = 'ASC'){
         $this->getQueryBuilder();
         $this->instance = $this->instance->orderBy($column, $sort);
         return $this->instance;

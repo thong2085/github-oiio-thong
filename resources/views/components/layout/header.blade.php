@@ -31,6 +31,9 @@
 
                 @if (auth()->guard('web')->check())
                     <li class="nav-item me-2">
+                        <a class="nav-link border-0 rounded bg-white text-dark" href="{{route('wallet.show')}}">Ví tiền: {{format_price(auth()->user()->wallet()->value('amount'))}}</a>
+                    </li>
+                    <li class="nav-item me-2">
     {{--                    <a class="nav-link border-0 rounded bg-white text-dark" href="{{route('wallet.show')}}">Ví tiền: {{format_price(auth()->user()->wallet()->value('amount'))}}</a>--}}
                         <a class="nav-link border-0 rounded text-dark" href="">
                             <img src="{{ asset('icon/settings.svg') }}"

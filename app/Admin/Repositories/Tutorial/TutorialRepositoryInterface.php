@@ -53,7 +53,7 @@ interface TutorialRepositoryInterface
      *
      * @return mixed
      */
-    public function getQueryBuilderOrderBy($column = 'id', $sort = 'DESC');
+    public function getQueryBuilderOrderBy($column = 'id', $sort = 'ASC');
     /**
      * make query
      *
