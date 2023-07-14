@@ -84,8 +84,26 @@ class TutorialDataTable extends BaseDataTable
     protected function editColumnTitle(){
         $this->instanceDataTable = $this->instanceDataTable->editColumn('title', $this->view['editlink']);
     }
-    protected function editColumnLink(){
-        $this->instanceDataTable = $this->instanceDataTable->editColumn('title', $this->view['editlink']);
+    protected function editColumnLink()
+    {
+        $this->instanceDataTable = $this->instanceDataTable->addColumn('link', function ($row) {
+            return $row->link;
+        });
+//        $this->instanceDataTable = $this->instanceDataTable->editColumn('id', function ($row) {
+//            $videoUrl = $row->link;
+//            $videoId = $this->extractYoutubeVideoId($videoUrl);
+//
+//            $iframe = '<iframe width="560" height="315" src="https://www.youtube.com/embed/' . $videoId . '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+//
+//            return html_entity_decode($iframe);
+//        })->rawColumns(['link']);
+    }
+
+    protected function extractYoutubeVideoId($url) {
+        $pattern = '/(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:embed\/|watch\?v=|v\/|ytscreeningroom\?v=|youtu\.be\/|user\/\S+|v=)|youtu\.be\/)([^\?\s&]+)/';
+        preg_match($pattern, $url, $matches);
+
+        return isset($matches[1]) ? $matches[1] : null;
     }
     protected function editColumnCreatedAt(){
         $this->instanceDataTable = $this->instanceDataTable->editColumn('created_at', '{{ date("d-m-Y", strtotime($created_at)) }}');
