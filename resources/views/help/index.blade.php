@@ -15,7 +15,7 @@
                 <a>Giới thiệu</a><a></a>
             </button>
 
-            <button type="button" class="btn btn-fw">
+            <button type="button" class="btn btn-fw" id="privacyButton">
                 <div>
                     <i>
                         <img src="{{ asset('icon/indexPrivacyTutorial5.svg') }}" width="35px" height="35px"/>
@@ -104,7 +104,7 @@
         }
 
         @media (max-width: 1990px) {
-            
+
 
             .template-demo a {
                 font-family: "Lato", sans-serif;
@@ -495,5 +495,12 @@
             }
         }
     </style>
+
+    <script>
+        document.getElementById("privacyButton").addEventListener("click", function() {
+            var slug = "{{ $listPrivacy->first()->slug }}";
+            window.location.href = "{{ route('privacy.detail', ['slug' => ':slug']) }}".replace(':slug', slug);
+        });
+    </script>
 
 @endsection

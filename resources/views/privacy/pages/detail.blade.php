@@ -140,28 +140,24 @@
         <div class="content-wrapper" style="overflow-y: auto; overflow-x: hidden; padding: 10px; ">
             <div class="content-wrapper" style="padding: 1rem 1rem; font-family: 'Lato', sans-serif;">
                 <div class="column-right__text">
+
                     <div class="title-HSD" style="display:flex;">
                         <div class="title-HSD__icons">
-                            <a href="#" style="display:flex;">
+                            <a href="{{ route('privacy.index') }}" style="display:flex;">
                                 <img src="{{ asset('icon/backButton.svg') }}" width="30px" height="30px"/>
-                                <h1 style="    text-decoration: none;
-    color: #303030;
-font-family: Lato;
-font-size: 28px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;">Chính sách & Điều khoản</h1>
+                                <h1 style="text-decoration: none; color: #303030; font-family: Lato; font-size: 28px; font-style: normal; font-weight: 700; line-height: normal;">
+                                    Chính sách & Điều khoản
+                                </h1>
                             </a>
                         </div>
-                        <div class="title-HSD__text">
-                         
-                        </div>
                     </div>
+
                     <div class="column-right__title">
                         <h1>
                             {{ $privacy->title }}
                         </h1>
                     </div>
+
                 </div>
                 <p style="font-family: 'Lato', sans-serif;">
                     {!! $privacy->content !!}
