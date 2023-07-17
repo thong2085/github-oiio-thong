@@ -167,12 +167,21 @@
             }
 
             .btn.btn-fw {
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                float: left;
+                overflow: hidden;
+                padding: 15px 20px;
+                margin-right: 10px;
+                margin-bottom: 10px;
+                cursor: pointer;
                 width: 290px;
                 height: 72px;
             }
 
             .content-wrapper {
-                width: 90%;
+                width: 135%;
             }
         }
 
@@ -184,17 +193,17 @@
             }
 
             .content-wrapper {
-                width: 90%;
+                width: 145%;
             }
         }
 
         @media (max-width: 1030px) {
             .content-wrapper {
-                width: 100%;
+                width: 168%;
             }
 
             .btn.btn-fw {
-                width: 230px;
+                width: 210px;
                 height: 72px;
             }
 
