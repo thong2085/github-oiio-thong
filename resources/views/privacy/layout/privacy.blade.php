@@ -21,7 +21,7 @@
      style="width: 100%;
             flex-shrink: 0;
             background: linear-gradient(141deg, rgba(255, 255, 240, 0.04) 0%, rgba(255, 255, 240, 0.02) 100%) !important;
-            backdrop-filter: blur(20px); 
+            backdrop-filter: blur(20px);
             " >
     @include('layout.include.headerPrivacyTutorial')
 </nav>
@@ -30,28 +30,7 @@
 <!-- Start Main Content -->
 <div class="container-fluid page-body-wrapper"
      style="height: 100vh;">
-    <!-- Start Sidebar -->
-    <div class="sidebar" style="overflow-y: auto; position: sticky; top: 0;">
-        @include('privacy.layout.include.sidebar')
-    </div>
-    <!-- End Sidebar -->
-
-    <!-- Start main-panel -->
-    <div class="main-panel">
-        <!-- Start Content -->
-        <div class="content-wrapper" style="overflow-y: auto; overflow-x: hidden; padding: 10px; ">
-            @yield('content')
-        </div>
-        <!-- End Content -->
-
-        <!-- Start Footer -->
-        <footer class="footer" style="border-top: none; width: 100%; margin-top: 0px; background: #F3F3ED">
-            @include('layout.include.footer')
-        </footer>
-        <!-- End Footer -->
-    </div>
-    <!-- End main-panel -->
-
+    @yield('content')
 </div>
 <!-- End Main Content -->
 

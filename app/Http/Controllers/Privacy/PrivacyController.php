@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Privacy;
 
 use App\Http\Controllers\Controller;
 use App\Repositories\Privacy\PrivacyRepositoryInterface;
+use App\Models\Privacy;
 
 class PrivacyController extends Controller
 {
@@ -20,21 +21,22 @@ class PrivacyController extends Controller
     {
         return [
             'index' => 'help.index',
+            'sidebar' => 'privacy.layout.include.sidebar',
             'detail' => 'privacy.pages.detail',
         ];
     }
 
     public function index()
     {
-        return view($this->view['index'], [
-            'privacy' => $this->repository->searchAllLimit(),
-        ]);
+        return view($this->view['index']);
     }
 
     public function detail($slug)
     {
+        $listPrivacy = Privacy::orderBy('id', 'ASC')->get();
         return view($this->view['detail'], [
             'privacy' => \App\Models\Privacy::where('slug', $slug)->first(),
+            'listPrivacy' => $listPrivacy,
         ]);
     }
 }
