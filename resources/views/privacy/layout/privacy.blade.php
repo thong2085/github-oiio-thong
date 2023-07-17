@@ -6,19 +6,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Web đặt đơn</title>
-    <!-- plugins:css -->
+    <!-- start css -->
     <link rel="stylesheet" href="{{ asset('viewsCustom/assets/vendors/mdi/css/materialdesignicons.min.css') }}">
     <link rel="stylesheet" href="{{ asset('viewsCustom/assets/vendors/css/vendor.bundle.base.css') }}">
-    <!-- endinject -->
-    <!-- Plugin css for this page -->
-    <!-- End plugin css for this page -->
-    <!-- inject:css -->
-    <!-- endinject -->
-    <!-- Layout styles -->
     <link rel="stylesheet" href="{{ asset('viewsCustom/assets/css/style.css') }}">
-    <!-- End layout styles -->
     <link rel="shortcut icon" href="{{ asset('viewsCustom/assets/images/favicon.ico') }}" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap">
+    <!-- end css -->
 </head>
 
 <body style="background: #FFFDF6">
@@ -28,7 +22,7 @@
             flex-shrink: 0;
             background: linear-gradient(141deg, rgba(255, 255, 240, 0.04) 0%, rgba(255, 255, 240, 0.02) 100%) !important;
             backdrop-filter: blur(20px);" >
-    @include('privacy.layout.include.header')
+    @include('layout.include.headerPrivacyTutorial')
 </nav>
 <!-- End Header -->
 
@@ -51,7 +45,7 @@
 
         <!-- Start Footer -->
         <footer class="footer" style="border-top: none; width: 100%; margin-top: 0px; background: #F3F3ED">
-            @include('privacy.layout.include.footer')
+            @include('layout.include.footer')
         </footer>
         <!-- End Footer -->
     </div>
@@ -60,22 +54,15 @@
 </div>
 <!-- End Main Content -->
 
-<!-- container-scroller -->
-<!-- plugins:js -->
+<!-- Start JS -->
 <script src="{{ asset('viewsCustom/assets/vendors/js/vendor.bundle.base.js') }}"></script>
-<!-- endinject -->
-<!-- Plugin js for this page -->
 <script src="{{ asset('viewsCustom/assets/vendors/chart.js/Chart.min.js') }}"></script>
 <script src="{{ asset('viewsCustom/assets/js/jquery.cookie.js') }}" type="text/javascript"></script>
-<!-- End plugin js for this page -->
-<!-- inject:js -->
 <script src="{{ asset('viewsCustom/assets/js/off-canvas.js') }}"></script>
 <script src="{{ asset('viewsCustom/assets/js/hoverable-collapse.js') }}"></script>
 <script src="{{ asset('viewsCustom/assets/js/misc.js') }}"></script>
-<!-- endinject -->
-<!-- Custom js for this page -->
 <script src="{{ asset('viewsCustom/assets/js/dashboard.js') }}"></script>
 <script src="{{ asset('viewsCustom/assets/js/todolist.js') }}"></script>
-<!-- End custom js for this page -->
+<!-- End JS -->
 </body>
 </html>

@@ -19,8 +19,8 @@ class PrivacyController extends Controller
     public function getView()
     {
         return [
-            'index' => 'privacy.user.pages.index',
-            'detail' => 'privacy.user.pages.detail',
+            'index' => 'help.index',
+            'detail' => 'privacy.pages.detail',
         ];
     }
 

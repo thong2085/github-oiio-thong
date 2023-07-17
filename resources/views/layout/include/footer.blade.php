@@ -1,9 +1,8 @@
 <div class="container-fluid d-flex justify-content-between">
-    {{-- Chính sách --}}
+    {{-- Trợ giúp - Chính sách --}}
     <span class="text-muted col-8 d-block text-center text-sm-start d-sm-inline-block" style="text-align: left !important;">
-        <a href="#" style="color: #A6A4A4; display: inline-flex; align-items: center; gap: 12px; margin-right: 12px; text-decoration: none;">Chính sách quyền riêng tư</a>
-        <a href="#" style="color: #A6A4A4; display: inline-flex; align-items: center; gap: 12px; margin-right: 12px; text-decoration: none;">Điều khoản và điều kiện giao dịch</a>
-        <a href="#" style="color: #A6A4A4; display: inline-flex; align-items: center; gap: 12px; text-decoration: none;">Chính sách thanh toán</a>
+        <a href="#" style="color: #A6A4A4; display: inline-flex; align-items: center; gap: 12px; margin-right: 12px; text-decoration: none;">Trợ giúp</a>
+        <a href="#" style="color: #A6A4A4; display: inline-flex; align-items: center; gap: 12px; text-decoration: none;">Điều khoản sử dụng</a>
     </span>
 
     {{-- Logo --}}
@@ -14,6 +13,9 @@
         </a>
         <a href="mailto:oiio@gmail.com">
             <img src="{{ asset('icon/mail.svg') }}" alt="mail"/>
+        </a>
+        <a href="mailto:oiio@gmail.com">
+            <img src="{{ asset('icon/zalo.svg') }}" alt="mail"/>
         </a>
         <a href="tel:0934584939">
             <img src="{{ asset('icon/phone.svg') }}" alt="phone"/>
