@@ -21,7 +21,8 @@
      style="width: 100%;
             flex-shrink: 0;
             background: linear-gradient(141deg, rgba(255, 255, 240, 0.04) 0%, rgba(255, 255, 240, 0.02) 100%) !important;
-            backdrop-filter: blur(20px);" >
+            backdrop-filter: blur(20px); 
+            " >
     @include('layout.include.headerPrivacyTutorial')
 </nav>
 <!-- End Header -->

@@ -33,7 +33,8 @@
 </div>
 
 <style>
-    .nav-profile-text p {
+       @media (max-width: 1980px) {
+        .nav-profile-text p {
         font-family: 'Lato', sans-serif;
         font-size: 28px;
         font-style: normal;
@@ -51,14 +52,29 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+    }
+    
     @media (max-width: 1290px) {
         .nav-profile-text p {
             font-size: 18px;
         }
     }
+    @media (max-width: 1025px) {
+        .nav-profile-text p {
+            font-size: 20px;
+        }
+        .nav__text-supor {
+            display: none;
+        }
+    }
     @media (max-width: 780px) {
         .nav__text-supor {
             display: none;
+        }
+    }
+    @media (max-width: 540px) {
+        .nav-profile-text p {
+            font-size: 18px;
         }
     }
     @media (max-width: 420px) {

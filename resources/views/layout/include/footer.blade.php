@@ -6,8 +6,8 @@
     </span>
 
     {{-- Logo --}}
-    <span class="float-none float-sm-end mt-1 mt-sm-0 text-end"
-          style="color: #A6A4A4; display: inline-flex; align-items: flex-start; gap: 15px;">
+    <span class="float-none float-sm-end mt-1 mt-sm-0 text-end repon"
+          style="color: #A6A4A4; display: inline-flex; align-items: flex-start; gap: 15px;padding-left:40%;">
         <a href="https://www.facebook.com/groups/shopee.tittok.facebcok">
             <img src="{{ asset('icon/facebook.svg') }}" alt="facebook"/>
         </a>

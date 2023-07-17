@@ -104,24 +104,7 @@
         }
 
         @media (max-width: 1990px) {
-            .nav-profile-text p {
-                font-family: "Lato", sans-serif;
-                font-size: 28px;
-                font-style: normal;
-                padding-top: 15px;
-                font-weight: 700;
-                line-height: 28.4px;
-                background: linear-gradient(
-                    90deg,
-                    #fbc250 0%,
-                    #dea143 24.48%,
-                    #f5ae5d 50%,
-                    #de8c49 77.08%,
-                    #e0793f 100%
-                );
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-            }
+            
 
             .template-demo a {
                 font-family: "Lato", sans-serif;
@@ -130,7 +113,7 @@
             .template-demo {
                 display: grid;
                 grid-template-columns: 25% 25% 25% 25%;
-                padding-left: 10%;
+                padding-left: 12%;
             }
 
             .card-body {
@@ -145,7 +128,7 @@
                 font-style: normal;
                 font-weight: 700;
                 line-height: normal;
-                padding-left: 10%;
+                padding-left: 12%;
             }
 
             .template-demo a {
@@ -176,12 +159,12 @@
                 margin-right: 10px;
                 margin-bottom: 10px;
                 cursor: pointer;
-                width: 290px;
-                height: 72px;
+                width: 345px;
+                height: 82px;
             }
 
             .content-wrapper {
-                width: 135%;
+                width: 120%;
             }
         }
 
@@ -194,6 +177,12 @@
 
             .content-wrapper {
                 width: 145%;
+            }
+            .card-description {
+                padding-left: 7%;
+            }
+            .template-demo {
+                padding-left: 7%;
             }
         }
 
@@ -210,7 +199,7 @@
             .template-demo {
                 display: grid;
                 grid-template-columns: 25% 25% 25% 25%;
-                padding-left: 20px;
+                padding-left: 25px;
             }
 
             .card-body {
@@ -218,40 +207,19 @@
             }
 
             .card-description {
-                padding-left: 20px;
+                padding-left: 25px;
             }
         }
 
         @media (max-width: 913px) {
             .content-wrapper {
-                width: 93%;
+                width: 128%;
             }
 
             .template-demo {
                 display: grid;
                 grid-template-columns: 33% 33% 33%;
-                padding-left: 75px;
-            }
-
-            .btn.btn-fw {
-                width: 230px;
-                height: 70px;
-            }
-
-            .card-description {
-                padding-left: 75px;
-            }
-        }
-
-        @media (max-width: 821px) {
-            .content-wrapper {
-                width: 100%;
-            }
-
-            .template-demo {
-                display: grid;
-                grid-template-columns: 33% 33% 33%;
-                padding-left: 15px;
+                padding-left: 40px;
             }
 
             .btn.btn-fw {
@@ -260,7 +228,28 @@
             }
 
             .card-description {
-                padding-left: 15px;
+                padding-left: 40px;
+            }
+        }
+
+        @media (max-width: 821px) {
+            .content-wrapper {
+                width: 138%;
+            }
+
+            .template-demo {
+                display: grid;
+                grid-template-columns: 33% 33% 33%;
+                padding-left: 0px;
+            }
+
+            .btn.btn-fw {
+                width: 240px;
+                height: 70px;
+            }
+
+            .card-description {
+                padding-left: 0px;
             }
         }
 
@@ -286,7 +275,7 @@
 
         @media (max-width: 768px) {
             .content-wrapper {
-                width: 102%;
+                width: 138%;
             }
 
             .template-demo {
@@ -296,7 +285,7 @@
             }
 
             .btn.btn-fw {
-                width: 230px;
+                width: 220px;
                 height: 70px;
             }
 
@@ -307,22 +296,22 @@
 
         @media (max-width: 541px) {
             .content-wrapper {
-                width: 102%;
+                width: 153%;
             }
 
             .template-demo {
                 display: grid;
                 grid-template-columns: 50% 50%;
-                padding-left: 0px;
+                padding-left: 5px;
             }
 
             .btn.btn-fw {
-                width: 240px;
+                width: 225px;
                 height: 70px;
             }
 
             .card-description {
-                padding-left: 0px;
+                padding-left: 5px;
             }
         }
 
@@ -373,13 +362,13 @@
             }
 
             .content-wrapper {
-                width: 101%;
+                width: 165%;
             }
 
             .template-demo {
                 display: grid;
                 grid-template-columns: 50% 50%;
-                padding-left: 0px;
+                padding-left: 15px;
             }
 
             .template-demo a {
@@ -387,7 +376,7 @@
             }
 
             .btn.btn-fw {
-                width: 190px;
+                width: 165px;
                 height: 50px;
             }
 
@@ -407,7 +396,7 @@
 
             .card-description {
                 font-size: 18px;
-                padding-left: 0px;
+                padding-left: 15px;
             }
         }
 
@@ -417,7 +406,7 @@
             }
 
             .content-wrapper {
-                width: 100%;
+                width: 175%;
             }
 
             .template-demo {
@@ -431,7 +420,7 @@
             }
 
             .btn.btn-fw {
-                width: 180px;
+                width: 170px;
                 height: 50px;
             }
 
@@ -457,11 +446,11 @@
 
         @media (max-width: 376px) {
             .content-wrapper {
-                width: 100%;
+                width: 176%;
             }
 
             .btn.btn-fw {
-                width: 170px;
+                width: 165px;
                 height: 50px;
             }
         }
@@ -472,11 +461,11 @@
             }
 
             .content-wrapper {
-                width: 102%;
+                width: 178%;
             }
 
             .btn.btn-fw {
-                width: 165px;
+                width: 155px;
                 height: 50px;
             }
         }
@@ -498,7 +487,7 @@
 
             .btn.btn-fw {
                 width: 240px;
-                height: 70px;
+                height: 50px;
             }
 
             .card-description {
