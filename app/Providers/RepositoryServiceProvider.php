@@ -15,6 +15,7 @@ class RepositoryServiceProvider extends ServiceProvider
         'App\Repositories\Wallet\WalletRepositoryInterface' => 'App\Repositories\Wallet\WalletRepository',
         'App\Repositories\Reviews\ReviewsRepositoryInterface' => 'App\Repositories\Reviews\ReviewsRepository',
         'App\Repositories\News\NewsRepositoryInterface' => 'App\Repositories\News\NewsRepository',
+        'App\Repositories\Privacy\PrivacyRepositoryInterface' => 'App\Repositories\Privacy\PrivacyRepository',
         'App\Repositories\Transactions\Deposit\DepositRepositoryInterface' => 'App\Repositories\Transactions\Deposit\DepositRepository',
         'App\Repositories\Transactions\Withdrawn\WithdrawnRepositoryInterface' => 'App\Repositories\Transactions\Withdrawn\WithdrawnRepository',
         'App\Repositories\Transactions\TransactionRepositoryInterface' => 'App\Repositories\Transactions\TransactionRepository',

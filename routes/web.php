@@ -178,6 +178,14 @@ Route::prefix('/tin-tuc')->as('news.')->group(function () {
     });
 });
 
+// Chính sách
+Route::prefix('/tro-giup')->as('privacy.')->group(function () {
+    Route::controller(App\Http\Controllers\Privacy\PrivacyController::class)->group(function () {
+        Route::get('/', 'index')->name('index');
+        Route::get('/{slug}', 'detail')->name('detail');
+    });
+});
+
 Route::get('/lay-phuong-xa-theo-quan-huyen', [App\Http\Controllers\User\AddressController::class, 'wardOfDistrict']);
 Route::get('/lay-quan-huyen-theo-tinh-thanh', [App\Http\Controllers\User\AddressController::class, 'districtOfProvince']);
 
