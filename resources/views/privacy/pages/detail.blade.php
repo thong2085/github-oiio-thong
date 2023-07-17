@@ -1,10 +1,36 @@
 @extends('privacy.layout.privacy')
 
 @section('content')
-
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+  @media (max-width: 1280px){
+    .title-HSD h1{
+        font-size:22px;
+    }
+    .column-right__title h1{
+        font-size:22px;
+    }
+    .title-HSD__icons img{
+        width: 20px;
+        height:20px;
+    }
+  }
+  @media (max-width: 1024px){
+    .title-HSD h1{
+        font-size:22px;
+    }
+    .column-right__title h1{
+        font-size:22px;
+    }
+    .title-HSD__icons img{
+        width: 20px;
+        height:20px;
+    }
+  }
+</style>
     <div class="content-wrapper">
         <div class="column-right__text">
-            <div class="title-HSD">
+            <div class="title-HSD" style="display:flex;font-family: 'Lato', sans-serif;">
                 <div class="title-HSD__icons">
                     <a href="#">
                         <img src="{{ asset('icon/backButton.svg') }}" width="30px" height="30px"/>
