@@ -38,7 +38,7 @@
     <!-- Start main-panel -->
     <div class="main-panel">
         <!-- Start Content -->
-        <div class="content-wrapper" style="overflow-y: auto; overflow-x: hidden; padding: 10px;">
+        <div class="content-wrapper" style="overflow-y: auto; overflow-x: hidden; padding: 10px; ">
             @yield('content')
         </div>
         <!-- End Content -->

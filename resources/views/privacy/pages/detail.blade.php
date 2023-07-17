@@ -2,6 +2,7 @@
 
 @section('content')
 <style>
+    *{font-family: 'Lato', sans-serif;}
   @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
   @media (max-width: 1280px){
     .title-HSD h1{
@@ -27,8 +28,44 @@
         height:20px;
     }
   }
+  @media (max-width: 415px){
+    .title-HSD h1{
+        font-size:20px;
+    }
+    .column-right__title h1{
+        font-size:20px;
+    }
+    .title-HSD__icons img{
+        width: 20px;
+        height:20px;
+    }
+  }
+  @media (max-width: 400px){
+    .title-HSD h1{
+        font-size:18px;
+    }
+    .column-right__title h1{
+        font-size:18px;
+    }
+    .title-HSD__icons img{
+        width: 15px;
+        height:15px;
+    }
+  }
+  @media (max-width: 281px){
+    .title-HSD h1{
+        font-size:14px;
+    }
+    .column-right__title h1{
+        font-size:14px;
+    }
+    .title-HSD__icons img{
+        width: 15px;
+        height:15px;
+    }
+  }
 </style>
-    <div class="content-wrapper">
+    <div class="content-wrapper" style="padding: 1rem 1rem;">
         <div class="column-right__text">
             <div class="title-HSD" style="display:flex;font-family: 'Lato', sans-serif;">
                 <div class="title-HSD__icons">
