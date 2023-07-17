@@ -142,12 +142,19 @@
                 <div class="column-right__text">
                     <div class="title-HSD" style="display:flex;">
                         <div class="title-HSD__icons">
-                            <a href="#">
+                            <a href="#" style="display:flex;">
                                 <img src="{{ asset('icon/backButton.svg') }}" width="30px" height="30px"/>
+                                <h1 style="    text-decoration: none;
+    color: #303030;
+font-family: Lato;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;">Chính sách & Điều khoản</h1>
                             </a>
                         </div>
                         <div class="title-HSD__text">
-                            <h1>Chính sách & Điều khoản</h1>
+                         
                         </div>
                     </div>
                     <div class="column-right__title">
