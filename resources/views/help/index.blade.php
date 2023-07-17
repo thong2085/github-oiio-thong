@@ -1,36 +1,102 @@
 @extends('help.layout.help')
 
 @section('content')
+
     <div class="card-body">
         <p class="card-description">Danh Mục </p>
+
         <div class="template-demo">
             <button type="button" class="btn btn-fw ">
-                <div class="icons-center"><i><img src="{{ asset('icon/indexPrivacyTutorial6.svg') }}"
-                                                  width="35px" height="35px"/></i></div>
-                <a>Giới thiệu</a><a></a></button>
-            <button type="button" class="btn btn-fw">
-                <div><i><img src="{{ asset('icon/indexPrivacyTutorial5.svg') }}" width="35px" height="35px"/></i>
+                <div class="icons-center">
+                    <i>
+                        <img src="{{ asset('icon/indexPrivacyTutorial6.svg') }}" width="35px" height="35px"/>
+                    </i>
                 </div>
-                <a>Chính sách & Điều khoản</a><a></a></button>
+                <a>Giới thiệu</a><a></a>
+            </button>
+
             <button type="button" class="btn btn-fw">
-                <div><i><img src="{{ asset('icon/indexPrivacyTutorial4.svg') }}" width="35px" height="35px"/></i>
+                <div>
+                    <i>
+                        <img src="{{ asset('icon/indexPrivacyTutorial5.svg') }}" width="35px" height="35px"/>
+                    </i>
                 </div>
-                <a>Hướng dẫn sử dụng web</a><a></a></button>
+                <a>Chính sách & Điều khoản</a><a></a>
+            </button>
+
             <button type="button" class="btn btn-fw">
-                <div><i><img src="{{ asset('icon/indexPrivacyTutorial3.svg') }}" width="35px" height="35px"/></i>
+                <div>
+                    <i>
+                        <img src="{{ asset('icon/indexPrivacyTutorial4.svg') }}" width="35px" height="35px"/>
+                    </i>
                 </div>
-                <a>Khuyến mãi & Ưu đãi</a><a></a></button>
+                <a>Hướng dẫn sử dụng web</a><a></a>
+            </button>
+
             <button type="button" class="btn btn-fw">
-                <div><i><img src="{{ asset('icon/indexPrivacyTutorial2.svg') }}" width="35px" height="35px"/></i>
+                <div>
+                    <i>
+                        <img src="{{ asset('icon/indexPrivacyTutorial3.svg') }}" width="35px" height="35px"/>
+                    </i>
                 </div>
-                <a>Thanh toán</a><a></a></button>
+                <a>Khuyến mãi & Ưu đãi</a><a></a>
+            </button>
+
             <button type="button" class="btn btn-fw">
-                <div><i><img src="{{ asset('icon/indexPrivacyTutorial1.svg') }}" width="35px" height="35px"/></i>
+                <div>
+                    <i>
+                        <img src="{{ asset('icon/indexPrivacyTutorial2.svg') }}" width="35px" height="35px"/>
+                    </i>
                 </div>
-                <a>Trả hàng & Hoàn Tiền</a><a></a></button>
+                <a>Thanh toán</a><a></a>
+            </button>
+
+            <button type="button" class="btn btn-fw">
+                <div>
+                    <i>
+                        <img src="{{ asset('icon/indexPrivacyTutorial1.svg') }}" width="35px" height="35px"/>
+                    </i>
+                </div>
+                <a>Trả hàng & Hoàn Tiền</a><a></a>
+            </button>
         </div>
     </div>
+
     <style>
+        .btn-fw:hover {
+            border: 1px solid red;
+        }
+
+        .btn {
+            display: inline-block;
+            font-weight: 400;
+            line-height: 1;
+            color: #343a40;
+            text-align: center;
+            text-decoration: none;
+            vertical-align: middle;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-color: transparent;
+            border: 1px solid rgba(81, 81, 81, 0.5);
+            padding: 0.875rem 2.5rem;
+            font-size: 0.875rem;
+            border-radius: 0.1875rem;
+            -webkit-transition: color 0.15s ease-in-out,
+            background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+            -webkit-box-shadow 0.15s ease-in-out;
+            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+            border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+            border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+            border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+            -webkit-box-shadow 0.15s ease-in-out;
+        }
+
         .template-demo i img {
             -webkit-flex-direction: column;
             flex-direction: column;
@@ -64,7 +130,7 @@
             .template-demo {
                 display: grid;
                 grid-template-columns: 25% 25% 25% 25%;
-                padding-left: 20%;
+                padding-left: 10%;
             }
 
             .card-body {
@@ -79,7 +145,7 @@
                 font-style: normal;
                 font-weight: 700;
                 line-height: normal;
-                padding-left: 20%;
+                padding-left: 10%;
             }
 
             .template-demo a {
@@ -99,32 +165,43 @@
                 flex: 1 1 auto;
                 padding: 1rem 1rem;
             }
-        }
-
-        @media (max-width: 1290px) {
-            .nav-profile-text p {
-                font-size: 18px;
-            }
 
             .btn.btn-fw {
-                width: 200px;
+                width: 290px;
                 height: 72px;
             }
 
             .content-wrapper {
-                width: 105%;
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 1290px) {
+
+            .btn.btn-fw {
+                width: 240px;
+                height: 72px;
+            }
+
+            .content-wrapper {
+                width: 90%;
             }
         }
 
         @media (max-width: 1030px) {
             .content-wrapper {
-                width: 122%;
+                width: 100%;
+            }
+
+            .btn.btn-fw {
+                width: 230px;
+                height: 72px;
             }
 
             .template-demo {
                 display: grid;
                 grid-template-columns: 25% 25% 25% 25%;
-                padding-left: 100px;
+                padding-left: 20px;
             }
 
             .card-body {
@@ -132,13 +209,13 @@
             }
 
             .card-description {
-                padding-left: 100px;
+                padding-left: 20px;
             }
         }
 
         @media (max-width: 913px) {
             .content-wrapper {
-                width: 121%;
+                width: 93%;
             }
 
             .template-demo {
@@ -154,59 +231,31 @@
 
             .card-description {
                 padding-left: 75px;
-            }
-        }
-
-        @media (max-width: 830px) {
-            .nav__text-supor {
-                display: none;
-            }
-
-            .content-wrapper {
-                width: 121%;
-            }
-
-            .template-demo {
-                display: grid;
-                grid-template-columns: 33% 33% 33%;
-                padding-left: 50px;
-            }
-
-            .card-body {
-                width: calc(100% - 260px);
-            }
-
-            .card-description {
-                padding-left: 50px;
             }
         }
 
         @media (max-width: 821px) {
             .content-wrapper {
-                width: 130%;
+                width: 100%;
             }
 
             .template-demo {
                 display: grid;
                 grid-template-columns: 33% 33% 33%;
-                padding-left: 35px;
+                padding-left: 15px;
             }
 
             .btn.btn-fw {
-                width: 230px;
+                width: 240px;
                 height: 70px;
             }
 
             .card-description {
-                padding-left: 35px;
+                padding-left: 15px;
             }
         }
 
         @media (max-width: 780px) {
-            .nav__text-supor {
-                display: none;
-            }
-
             .content-wrapper {
                 width: 128%;
             }
@@ -228,7 +277,7 @@
 
         @media (max-width: 768px) {
             .content-wrapper {
-                width: 135%;
+                width: 102%;
             }
 
             .template-demo {
@@ -247,15 +296,9 @@
             }
         }
 
-        @media (max-width: 570px) {
-            .nav-profile-text p {
-                font-size: 18px;
-            }
-        }
-
         @media (max-width: 541px) {
             .content-wrapper {
-                width: 150%;
+                width: 102%;
             }
 
             .template-demo {
@@ -275,9 +318,6 @@
         }
 
         @media (max-width: 420px) {
-            .nav-profile-text p {
-                font-size: 14px;
-            }
 
             .content-wrapper {
                 width: 170%;
@@ -324,7 +364,7 @@
             }
 
             .content-wrapper {
-                width: 165%;
+                width: 101%;
             }
 
             .template-demo {
@@ -338,7 +378,7 @@
             }
 
             .btn.btn-fw {
-                width: 195px;
+                width: 190px;
                 height: 50px;
             }
 
@@ -368,7 +408,7 @@
             }
 
             .content-wrapper {
-                width: 168%;
+                width: 100%;
             }
 
             .template-demo {
@@ -382,7 +422,7 @@
             }
 
             .btn.btn-fw {
-                width: 183px;
+                width: 180px;
                 height: 50px;
             }
 
@@ -408,11 +448,11 @@
 
         @media (max-width: 376px) {
             .content-wrapper {
-                width: 172%;
+                width: 100%;
             }
 
             .btn.btn-fw {
-                width: 175px;
+                width: 170px;
                 height: 50px;
             }
         }
@@ -423,11 +463,11 @@
             }
 
             .content-wrapper {
-                width: 175%;
+                width: 102%;
             }
 
             .btn.btn-fw {
-                width: 168px;
+                width: 165px;
                 height: 50px;
             }
         }
@@ -457,4 +497,5 @@
             }
         }
     </style>
+
 @endsection
