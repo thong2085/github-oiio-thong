@@ -50,12 +50,12 @@ class NewsController extends Controller
 
     public function store(NewsRequest $request){
         $instance = $this->service->store($request);
-        return redirect()->route($this->view['edit'], $instance->id);
+        return redirect()->route($this->view['index'])->with('success', __('notifySuccess'));
     }
 
     public function update(NewsRequest $request){
         $this->service->update($request);
-        return back()->with('success', __('notifySuccess'));
+        return redirect()->route($this->view['index'])->with('success', __('notifySuccess'));
     }
 
     public function delete($id){

@@ -55,7 +55,7 @@ class PrivacyController extends Controller
 
     public function update(PrivacyRequest $request){
         $this->service->update($request);
-        return back()->with('success', __('notifySuccess'));
+        return redirect()->route($this->view['index'])->with('success', __('notifySuccess'));
     }
 
     public function delete($id){
