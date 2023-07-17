@@ -16434,7 +16434,7 @@ code {
 @media (max-width: 991px) {
     .footer {
         margin-left: 0;
-        width: 80%;
+        width: 100%;
     }
 }
 
@@ -20550,7 +20550,7 @@ dl li {
 }
 
 .navbar .navbar-brand-wrapper .navbar-brand.brand-logo-mini {
-    display: none;
+    /* display: none; */
 }
 
 .navbar .navbar-brand-wrapper .navbar-brand.brand-logo-mini img {
@@ -20986,11 +20986,11 @@ dl li {
     }
 
     .navbar .navbar-brand-wrapper {
-        width: 75px;
+        width: 155px;
     }
 
     .navbar .navbar-brand-wrapper .navbar-brand.brand-logo {
-        display: none;
+        /* display: none; */
     }
 
     .navbar .navbar-brand-wrapper .navbar-brand.brand-logo-mini {
@@ -22218,7 +22218,7 @@ dl li {
 .main-panel {
     -webkit-transition: width 0.25s ease, margin 0.25s ease;
     transition: width 0.25s ease, margin 0.25s ease;
-    width: calc(100% - 260px);
+    width: calc(100% - 0px);
     min-height: calc(100vh - 70px);
     display: -webkit-box;
     display: -ms-flexbox;

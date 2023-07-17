@@ -164,7 +164,7 @@
             }
 
             .content-wrapper {
-                width: 120%;
+                width: 104%;
             }
         }
 
@@ -176,7 +176,7 @@
             }
 
             .content-wrapper {
-                width: 145%;
+                width: 115%;
             }
             .card-description {
                 padding-left: 7%;

@@ -91,6 +91,7 @@
         .nav-profile-text p {
             font-size: 10px;
         }
+       
     }
 </style>
 
