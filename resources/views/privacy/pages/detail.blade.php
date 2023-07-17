@@ -4,7 +4,21 @@
 <style>
     *{font-family: 'Lato', sans-serif;}
   @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
-  @media (max-width: 1280px){
+  @media (max-width: 1980px){
+    .column-right__title{
+        padding-top:6px;
+    }
+    .title-HSD__icons{
+        padding-top:5px;
+    }
+  }
+  @media (max-width: 1281px){
+    .column-right__title{
+        padding-top:6px;
+    }
+    .title-HSD__icons{
+        padding-top:0px;
+    }
     .title-HSD h1{
         font-size:22px;
     }
@@ -27,6 +41,7 @@
         width: 20px;
         height:20px;
     }
+    
   }
   @media (max-width: 415px){
     .title-HSD h1{
@@ -36,8 +51,14 @@
         font-size:20px;
     }
     .title-HSD__icons img{
-        width: 20px;
-        height:20px;
+        width: 16px;
+        height:16px;
+    }
+    .column-right__title{
+        padding-top:10px;
+    }
+    .title-HSD__icons{
+        padding-top:0px;
     }
   }
   @media (max-width: 400px){
@@ -60,8 +81,14 @@
         font-size:14px;
     }
     .title-HSD__icons img{
-        width: 15px;
-        height:15px;
+        width: 12px;
+        height:12px;
+    }
+    .title-HSD__text{
+        padding-top:0px;
+    }
+    .title-HSD__icons{
+        padding-top:0px;
     }
   }
 </style>
@@ -73,7 +100,7 @@
                         <img src="{{ asset('icon/backButton.svg') }}" width="30px" height="30px"/>
                     </a>
                 </div>
-                <div class="title-HSD__text">
+                <div class="title-HSD__text" style="">
                     <h1>Các Chính sách & Điều khoản</h1>
                 </div>
             </div>
