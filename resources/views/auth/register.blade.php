@@ -20,7 +20,7 @@
     <style>
         @media (max-width:391px){
             .content-wrapper{
-                padding:2rem 1.5rem;               
+                padding:2rem 1.5rem;
             }
             .page-body-wrapper {
                 min-height: calc(100vh - 160px);

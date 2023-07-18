@@ -35,13 +35,13 @@
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item"> <a class="nav-link" href="#">Thông tin shop</a></li>
                     <li class="nav-item"> <a class="nav-link" href="#">Tạo đơn</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="#">Đơn chưa nhận</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="#">Đơn đã nhận</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="#">Đơn đã đặt</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="#">Đơn xác nhận đã đặt</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="#">Đơn đã đánh giá</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="#">Đơn đã hoàn thành</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="#">Đơn đã huỷ</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="#">Chờ xác nhận</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="#">Đã nhận</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="#">Đang đặt</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="#">Đã đặt</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="#">Chờ đánh giá</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="#">Hoàn thành</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="#">Đơn huỷ</a></li>
                 </ul>
             </div>
         </li>

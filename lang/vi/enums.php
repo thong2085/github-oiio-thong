@@ -30,13 +30,20 @@ return [
         UserRoles::Shop->value => 'Shop',
     ],
     JobStatus::class => [
-        JobStatus::NotReceived->value => 'Đơn chưa nhận',
-        JobStatus::Received->value => 'Đơn đã nhận',
-        JobStatus::Ordered->value => 'Đơn đã đặt',
-        JobStatus::OrderConfirmed->value => 'Đơn xác nhận đã đặt',
-        JobStatus::Reviewed->value => 'Đơn đã đánh giá',
-        JobStatus::Completed->value => 'Đơn đã hoàn thành',
-        JobStatus::Cancelled->value => 'Đơn đã hủy'
+        // JobStatus::NotReceived->value => 'Đơn chưa nhận',
+        // JobStatus::Received->value => 'Đơn đã nhận',
+        // JobStatus::Ordered->value => 'Đơn đã đặt',
+        // JobStatus::OrderConfirmed->value => 'Đơn xác nhận đã đặt',
+        // JobStatus::Reviewed->value => 'Đơn đã đánh giá',
+        // JobStatus::Completed->value => 'Đơn đã hoàn thành',
+        // JobStatus::Cancelled->value => 'Đơn đã hủy'
+        JobStatus::NotReceived->value => 'Chờ xác nhận',
+        JobStatus::Received->value => 'Đã nhận',
+        JobStatus::Ordered->value => 'Chờ đặt đơn',
+        JobStatus::OrderConfirmed->value => 'Đã đặt',
+        JobStatus::Reviewed->value => 'Đánh giá',
+        JobStatus::Completed->value => 'Hoàn thành',
+        JobStatus::Cancelled->value => 'Đơn hủy'
     ],
     ReportJobStatus::class => [
         ReportJobStatus::Processing->value => 'Đang xử lý',
