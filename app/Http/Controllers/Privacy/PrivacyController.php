@@ -35,8 +35,10 @@ class PrivacyController extends Controller
     public function detail($slug)
     {
         $listPrivacy = Privacy::orderBy('id', 'ASC')->get();
+        $privacy = \App\Models\Privacy::where('slug', $slug)->get();
+
         return view($this->view['detail'], [
-            'privacy' => \App\Models\Privacy::where('slug', $slug)->first(),
+            'privacy' => $privacy,
             'listPrivacy' => $listPrivacy,
         ]);
     }

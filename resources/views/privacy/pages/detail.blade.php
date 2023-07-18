@@ -124,7 +124,7 @@
             <ul class="nav">
                 @foreach($listPrivacy as $key => $privacy)
                     <li class="nav-item">
-                        <a class="nav-link" href="">
+                        <a class="nav-link sidebar-link" href="{{ route('privacy.detail', ['slug' => $privacy->slug]) }}">
                             <span class="menu-title">{{ $privacy->title }}</span>
                         </a>
                     </li>
@@ -173,4 +173,25 @@
         <!-- End Footer -->
     </div>
     <!-- End main-panel -->
+
+    <!-- Trong phần đầu của layout -->
+    <script>
+        // Xử lý khi nhấp vào sidebar
+        document.addEventListener('click', function(e) {
+            var target = e.target;
+
+            // Kiểm tra nếu nhấp vào một sidebar link
+            if (target && target.matches('.sidebar-link')) {
+                e.preventDefault();
+
+                var slug = target.dataset.slug;
+                var url = '{{ route("privacy.detail", ":slug") }}'.replace(':slug', slug);
+
+                // Thay đổi URL và load lại trang
+                window.history.pushState({}, '', url);
+                window.location.reload();
+            }
+        });
+    </script>
+
 @endsection
