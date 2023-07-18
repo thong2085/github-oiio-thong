@@ -38,7 +38,7 @@
                         <div class="brand-logo">
                             <img src="{{ asset('icon/logoPagesAuth.png') }}" alt="logo">
                         </div>
-                        <h4 style="margin-top: 24px; display: flex; width: 100%; align-items: center; gap: 10px; font-family: 'Lato', sans-serif; font-weight: bold;">
+                        <h4 style="margin-top: 12px; display: flex; width: 100%; align-items: center; gap: 10px; font-family: 'Lato', sans-serif; font-weight: bold;">
                             Đăng ký để đặt đơn
                         </h4>
                         <x-form class="web" type="post" :validate="true" style="font-family: 'Lato', sans-serif">
