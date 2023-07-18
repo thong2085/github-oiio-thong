@@ -1,9 +1,9 @@
 <div class="container-fluid d-flex justify-content-between">
     {{-- Trợ giúp - Chính sách --}}
     <span class="text-muted col-8 d-block text-center text-sm-start d-sm-inline-block" style="text-align: left !important;background-color: #f3f3ED;">
-        <a href="#" style="color: #A6A4A4; display: inline-flex; align-items: center; gap: 12px; margin-right: 12px; text-decoration: none;">Chính Sách Quyền Riêng Tư</a>
-        <a href="#" style="color: #A6A4A4; display: inline-flex; align-items: center; gap: 12px;margin-right: 12px; text-decoration: none;">Điều khoản và điều kiện giao dịch</a>
-        <a href="#" style="color: #A6A4A4; display: inline-flex; align-items: center; gap: 12px; text-decoration: none;">Chính sách thanh toán</a>
+        <a href="#" style="color: #A6A4A4; display: inline-flex; align-items: center; gap: 12px; margin-right: 12px; text-decoration: none;z-index: 999;">Chính Sách Quyền Riêng Tư</a>
+        <a href="#" style="color: #A6A4A4; display: inline-flex; align-items: center; gap: 12px;margin-right: 12px; text-decoration: none;z-index: 999;">Điều khoản và điều kiện giao dịch</a>
+        <a href="#" style="color: #A6A4A4; display: inline-flex; align-items: center; gap: 12px; text-decoration: none;z-index: 999;">Chính sách thanh toán</a>
     </span>
 
     {{-- Logo --}}
