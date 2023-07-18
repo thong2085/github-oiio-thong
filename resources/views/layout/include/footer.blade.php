@@ -1,12 +1,10 @@
 <div class="container-fluid d-flex justify-content-between">
-    {{-- Trợ giúp - Chính sách --}}
-<<<<<<< HEAD
-    <span class="text-muted col-8 d-block text-center text-sm-start d-sm-inline-block" style="text-align: left !important;background-color: #f3f3ED;">
-        <a href="#" style="color: #A6A4A4; display: inline-flex; align-items: center; gap: 12px; margin-right: 12px; text-decoration: none;z-index: 999;">Chính Sách Quyền Riêng Tư</a>
-        <a href="#" style="color: #A6A4A4; display: inline-flex; align-items: center; gap: 12px;margin-right: 12px; text-decoration: none;z-index: 999;">Điều khoản và điều kiện giao dịch</a>
-        <a href="#" style="color: #A6A4A4; display: inline-flex; align-items: center; gap: 12px; text-decoration: none;z-index: 999;">Chính sách thanh toán</a>
-=======
-    <span class="text-muted col-8 d-block text-center text-sm-start d-sm-inline-block"
+    <!-- <span class="text-muted col-8 d-block text-center text-sm-start d-sm-inline-block" style="text-align: left !important;background-color: #f3f3ED;"> -->
+        
+        <!-- <a href="#" style="color: #A6A4A4; display: inline-flex; align-items: center; gap: 12px;margin-right: 12px; text-decoration: none;z-index: 999;">Điều khoản và điều kiện giao dịch</a> -->
+        <!-- <a href="#" style="color: #A6A4A4; display: inline-flex; align-items: center; gap: 12px; text-decoration: none;z-index: 999;">Chính sách thanh toán</a> -->
+
+    <span class="text-muted col-8 d-block text-center text-sm-start d-sm-inline-block " id="title-footer"
           style="text-align: left !important;">
         <a href="{{ route('privacy.index') }}"
            style="color: #A6A4A4; display: inline-flex; align-items: center; gap: 12px; margin-right: 12px; text-decoration: none;">
@@ -16,12 +14,12 @@
            style="color: #A6A4A4; display: inline-flex; align-items: center; gap: 12px; text-decoration: none;">
             Chính sách & Điều khoản
         </a>
->>>>>>> a3248df6a29f66dfaa72f2dc82a09118d1f7dd7c
+
     </span>
 
     {{-- Logo --}}
     <span class="float-none float-sm-end mt-1 mt-sm-0 text-end repon"
-          style="color: #A6A4A4; display: inline-flex; align-items: flex-start; gap: 15px;padding-left:40%;">
+          style="color: #A6A4A4; display: inline-flex; align-items: flex-start; gap: 15px;">
         <a href="https://www.facebook.com/groups/shopee.tittok.facebcok">
             <img src="{{ asset('icon/facebook.svg') }}" alt="facebook"/>
         </a>
@@ -39,3 +37,10 @@
         </a>
     </span>
 </div>
+<style>
+    @media (max-width:391px){
+        #title-footer{
+           display:block;
+        }
+    }
+</style>
