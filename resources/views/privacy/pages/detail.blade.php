@@ -68,6 +68,7 @@
     <!-- Start Sidebar -->
     <div class="sidebar" style="overflow-y: auto; position: sticky; top: 0;">
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
+<<<<<<< HEAD
         <ul class="nav">
             <li class="nav-item">
               <a class="nav-link" href="../../index.html">
@@ -128,12 +129,24 @@
               </a>
             </li>
           </ul>
+=======
+            <ul class="nav">
+                @foreach($listPrivacy as $key => $privacy)
+                    <li class="nav-item">
+                        <a class="nav-link sidebar-link" href="{{ route('privacy.detail', ['slug' => $privacy->slug]) }}">
+                            <span class="menu-title">{{ $privacy->title }}</span>
+                        </a>
+                    </li>
+                @endforeach
+            </ul>
+>>>>>>> a3248df6a29f66dfaa72f2dc82a09118d1f7dd7c
         </nav>
     </div>
     <!-- End Sidebar -->
 
     <!-- Start main-panel -->
     <div class="main-panel">
+<<<<<<< HEAD
           <div class="content-wrapper">
             <div class="column-right__text">
               <div class="title-HSD">
@@ -151,6 +164,30 @@
                   />
                   <h1>Các Chính sách & Điều khoản</h1>
                 </a>
+=======
+        <!-- Start Content -->
+        <div class="content-wrapper" style="overflow-y: auto; overflow-x: hidden; padding: 10px; ">
+            <div class="content-wrapper" style="padding: 1rem 1rem; font-family: 'Lato', sans-serif;">
+                <div class="column-right__text">
+
+                    <div class="title-HSD" style="display:flex;">
+                        <div class="title-HSD__icons">
+                            <a href="{{ route('privacy.index') }}" style="display:flex;">
+                                <img src="{{ asset('icon/backButton.svg') }}" width="30px" height="30px"/>
+                                <h1 style="text-decoration: none; color: #303030; font-family: Lato; font-size: 28px; font-style: normal; font-weight: 700; line-height: normal;">
+                                    Chính sách & Điều khoản
+                                </h1>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="column-right__title">
+                        <h1>
+                            {{ $privacy->title }}
+                        </h1>
+                    </div>
+
+>>>>>>> a3248df6a29f66dfaa72f2dc82a09118d1f7dd7c
                 </div>
               </div>
               <div class="column-right__title">
@@ -408,4 +445,25 @@
         <!-- End Footer -->
     </div>
     <!-- End main-panel -->
+
+    <!-- Trong phần đầu của layout -->
+    <script>
+        // Xử lý khi nhấp vào sidebar
+        document.addEventListener('click', function(e) {
+            var target = e.target;
+
+            // Kiểm tra nếu nhấp vào một sidebar link
+            if (target && target.matches('.sidebar-link')) {
+                e.preventDefault();
+
+                var slug = target.dataset.slug;
+                var url = '{{ route("privacy.detail", ":slug") }}'.replace(':slug', slug);
+
+                // Thay đổi URL và load lại trang
+                window.history.pushState({}, '', url);
+                window.location.reload();
+            }
+        });
+    </script>
+
 @endsection
