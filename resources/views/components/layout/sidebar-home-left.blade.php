@@ -157,7 +157,7 @@
         <x-card>
         <x-slot name="header">
             <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic4" aria-expanded="true" aria-controls="ui-basic4">
-                <img src="{{ asset('viewsCustom/assets/images/ic9.svg') }}" alt="">
+                <img width="20px"height="20px"src="{{ asset('viewsCustom/assets/images/ic9.svg') }}" alt="">
                 <span class="menu-title" style="margin-left:10px;"> Cài đặt</span>
                 <i style="margin-left:auto;font-size:20px;" class="ri-arrow-down-s-line"></i>
             </a>
