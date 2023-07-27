@@ -169,16 +169,6 @@
                         Lịch sử giao dịch
                     </div>
                 </a>
-                <a href="{{ route('user.bank.index') }}">
-                    <div class="nav-item">
-                        Tài khoản ngân hàng
-                    </div>
-                </a>
-                <a href="{{ route('user.index') }}">
-                    <div class="nav-item">
-                        Thông tin tài khoản
-                    </div>
-                </a>
                 @if(auth()->user()->isMember())
                     <a href="{{ route('user.create_shop') }}">
                         <div class="nav-item">
