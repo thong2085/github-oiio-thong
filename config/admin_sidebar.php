@@ -168,7 +168,7 @@ return [
         ]
     ],
     [
-        'title' => 'Chính sách',
+        'title' => 'Quản lý chính sách',
         'routeName' => null,
         'icon' => '<i class="ti ti-book"></i>',
         'roles' => [
@@ -182,12 +182,12 @@ return [
                 'icon' => '<i class="ti ti-plus"></i>',
                 'roles' => [],
             ],
-            [
-                'title' => 'Danh sách chính sách',
-                'routeName' => 'admin.privacy.index',
-                'icon' => '<i class="ti ti-list"></i>',
-                'roles' => [],
-            ],
+//            [
+//                'title' => 'Danh sách chính sách',
+//                'routeName' => 'admin.privacy.index',
+//                'icon' => '<i class="ti ti-list"></i>',
+//                'roles' => [],
+//            ],
         ]
     ],
     [
@@ -205,12 +205,12 @@ return [
                 'icon' => '<i class="ti ti-plus"></i>',
                 'roles' => [],
             ],
-            [
-                'title' => 'Danh sách hướng dẫn',
-                'routeName' => 'admin.tutorial.index',
-                'icon' => '<i class="ti ti-list"></i>',
-                'roles' => [],
-            ],
+//            [
+//                'title' => 'Danh sách hướng dẫn',
+//                'routeName' => 'admin.tutorial.index',
+//                'icon' => '<i class="ti ti-list"></i>',
+//                'roles' => [],
+//            ],
         ]
     ],
     [

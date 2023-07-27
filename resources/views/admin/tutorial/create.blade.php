@@ -21,7 +21,18 @@
             <x-form :action="route('admin.tutorial.create')" type="post" :validate="true">
                 <x-input type="hidden" name="admin_id" :value="auth()->guard('admin')->user()->id" />
                 <div class="row justify-content-center">
-                    @include('admin.tutorial.forms.form-create')
+                    <div class="col-12 col-md-12">
+                        <div class="card mb-3">
+                            <div class="card-body d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span>{{ ('Thêm hướng dẫn mới được thực hiện bên GitBook vui lòng truy cập gitbook để tiếp tục chỉnh sửa.') }}</span>
+                                </div>
+                                <div>
+                                    <a href="https://app.gitbook.com/o/XqMhJoAQfVAUNm04F4dX/s/FCnUv5Z2P9YAyscyPIwS/" class="btn btn-primary" target="_blank">GitBook</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </x-form>
         </div>

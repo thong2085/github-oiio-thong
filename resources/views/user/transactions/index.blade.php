@@ -11,7 +11,7 @@
                 <form action="" method="GET">
                     <div class="input-group mb-3">
                         <span class="input-group-text">Tìm kiếm giao dịch</span>
-                        <input type="text" class="form-control" name="search" value="{{isset($_GET['search'])?$_GET['search']:""}}" placeholder="Nhập mã giao dịch...">
+                        <input type="text" class="form-control" name="search" value="{{isset($_GET['search'])?$_GET['search']:}}" placeholder="Nhập mã giao dịch...">
                         <span class="input-group-text"><button type="submit" class="border-0 bg-transparent"><i
                                     class="fas fa-search"></i></button>
                         </span>

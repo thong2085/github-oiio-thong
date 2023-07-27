@@ -2,7 +2,6 @@
     {{-- Chính sách --}}
     <span class="text-muted col-8 d-block text-center text-sm-start d-sm-inline-block" style="text-align: left !important;">
         <a href="{{ route('privacy.index') }}" style="color: #A6A4A4; display: inline-flex; align-items: center; gap: 12px; margin-right: 12px; text-decoration: none;">Trợ giúp</a>
-        <a href="{{ route('privacy.index') }}" style="color: #A6A4A4; display: inline-flex; align-items: center; gap: 12px; text-decoration: none;">Chính sách & Điều khoản</a>
     </span>
 
     {{-- Logo --}}
